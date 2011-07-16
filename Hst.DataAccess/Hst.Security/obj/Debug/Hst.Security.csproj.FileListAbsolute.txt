@@ -1,0 +1,5 @@
+C:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Security\bin\Debug\Hst.Security.dll
+C:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Security\bin\Debug\Hst.Security.pdb
+C:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Security\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Security\obj\Debug\Hst.Security.dll
+C:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Security\obj\Debug\Hst.Security.pdb

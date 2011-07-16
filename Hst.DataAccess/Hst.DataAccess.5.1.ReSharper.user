@@ -1,0 +1,652 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:IndividualSubject.ascx" caret="2198" fromTop="18" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedStudents.ascx" caret="168" fromTop="2" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedSubjects.ascx" caret="303" fromTop="3" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedStudent.ascx" caret="115" fromTop="1" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedStudent.ascx.cs" caret="216" fromTop="9" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedSubject.ascx" caret="290" fromTop="3" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedSubject.ascx.cs" caret="491" fromTop="20" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedStudents.ascx.cs" caret="2064" fromTop="68" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedSubjects.ascx.cs" caret="1294" fromTop="17" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SubjectSelector.ascx.cs" caret="1881" fromTop="28" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedRecordType.ascx" caret="121" fromTop="1" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedDate.ascx" caret="457" fromTop="7" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:ChildSelector.ascx.cs" caret="741" fromTop="18" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:IndividualChild.ascx.cs" caret="317" fromTop="12" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedRecordType.ascx.cs" caret="758" fromTop="30" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedDate.ascx.cs" caret="479" fromTop="17" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/d:Styles/f:Site.css" caret="9608" fromTop="35" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:SubjectAccessor.cs" caret="190" fromTop="10" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:hstdb.Context.cs" caret="3393" fromTop="97" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:hstdb.Context.tt" caret="0" fromTop="0" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:UserAccessor.cs" caret="1520" fromTop="28" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Site.master" caret="1024" fromTop="19" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Global.asax" caret="0" fromTop="0" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="2249" fromTop="28" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Web.config" caret="1632" fromTop="21" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="1211" fromTop="22" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx.cs" caret="408" fromTop="17" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="267" fromTop="6" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:StudentAccessor.cs" caret="320" fromTop="14" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="810" fromTop="28" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:StudentAccessor.cs" caret="731" fromTop="20" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="9178" fromTop="19" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="7896" fromTop="34" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="8052" fromTop="20" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="7900" fromTop="20" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="1671" fromTop="29" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="976" fromTop="9" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="1619" fromTop="20" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="7006" fromTop="19" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="6931" fromTop="14" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="7500" fromTop="20" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:UserAccessor.cs" caret="1518" fromTop="28" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1172" fromTop="37" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1172" fromTop="27" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="4379" fromTop="28" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx.cs" caret="280" fromTop="11" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="9697" fromTop="30" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1172" fromTop="20" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1172" fromTop="28" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="3188" fromTop="26" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="3765" fromTop="17" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Site.master" caret="1024" fromTop="13" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="2249" fromTop="28" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx.cs" caret="709" fromTop="31" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="248" fromTop="2" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="118" fromTop="2" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="1211" fromTop="22" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx.cs" caret="408" fromTop="17" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1125" fromTop="29" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="173" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="35" />
+      <Item value="prop" priority="61" />
+      <Item value="Guid`0" priority="1" />
+      <Item value="DateTime`0" priority="18" />
+      <Item value="override" priority="2" />
+      <Item value="string" priority="54" />
+      <Item value="bool" priority="7" />
+      <Item value="User`0" priority="8" />
+      <Item value="BaseEntity`0" priority="12" />
+      <Item value="Child`0" priority="16" />
+      <Item value="StateRequiredSubject`0" priority="0" />
+      <Item value="Subject`0" priority="8" />
+      <Item value="Activity`0" priority="3" />
+      <Item value="Activity" priority="0" />
+      <Item value="Teacher`0" priority="3" />
+      <Item value="int" priority="9" />
+      <Item value="TimeSpan`0" priority="1" />
+      <Item value="Lesson`0" priority="2" />
+      <Item value="Test`0" priority="1" />
+      <Item value="using" priority="14" />
+      <Item value="HtmlString`0" priority="0" />
+      <Item value="Hst" priority="3" />
+      <Item value="DataAccess" priority="1" />
+      <Item value="HstDBContainer`0" priority="9" />
+      <Item value="new" priority="45" />
+      <Item value="HstDBContainer" priority="0" />
+      <Item value="dbc" priority="0" />
+      <Item value="SchoolAccessor`0" priority="2" />
+      <Item value="private" priority="12" />
+      <Item value="static" priority="1" />
+      <Item value="var" priority="51" />
+      <Item value="db" priority="49" />
+      <Item value="_connectionString" priority="10" />
+      <Item value="connectionString" priority="2" />
+      <Item value="from" priority="7" />
+      <Item value="where" priority="6" />
+      <Item value="s" priority="10" />
+      <Item value="u" priority="32" />
+      <Item value="select" priority="7" />
+      <Item value="if" priority="50" />
+      <Item value="result" priority="17" />
+      <Item value="null" priority="10" />
+      <Item value="else" priority="6" />
+      <Item value="return" priority="30" />
+      <Item value="void" priority="9" />
+      <Item value="School`0" priority="1" />
+      <Item value="sbyte" priority="0" />
+      <Item value="SaveOptions" priority="0" />
+      <Item value="SaveOptions`0" priority="0" />
+      <Item value="UserAccessor`0" priority="5" />
+      <Item value="login" priority="2" />
+      <Item value="throw" priority="3" />
+      <Item value="ArgumentOutOfRangeException" priority="0" />
+      <Item value="ApplicationException" priority="2" />
+      <Item value="passwordHash" priority="2" />
+      <Item value="false" priority="5" />
+      <Item value="c" priority="3" />
+      <Item value="child" priority="14" />
+      <Item value="true" priority="5" />
+      <Item value="SchoolAccessor" priority="0" />
+      <Item value="ConfigurationManager`0" priority="1" />
+      <Item value="sa" priority="2" />
+      <Item value="UserAccessor" priority="3" />
+      <Item value="ua" priority="7" />
+      <Item value="username" priority="1" />
+      <Item value="System" priority="3" />
+      <Item value="Security" priority="1" />
+      <Item value="Cryptography" priority="1" />
+      <Item value="byte" priority="1" />
+      <Item value="password" priority="0" />
+      <Item value="HashAlgorithm`0" priority="0" />
+      <Item value="bytes" priority="0" />
+      <Item value="Convert`0" priority="1" />
+      <Item value="inArray" priority="0" />
+      <Item value="PasswordStrengthRegularExpression" priority="0" />
+      <Item value="newPassword" priority="0" />
+      <Item value="Passwords`0" priority="0" />
+      <Item value="oldPassword" priority="0" />
+      <Item value="oldHashedPw" priority="0" />
+      <Item value="user" priority="14" />
+      <Item value="hashedPW" priority="0" />
+      <Item value="RegisterUser" priority="3" />
+      <Item value="as" priority="12" />
+      <Item value="pnl" priority="2" />
+      <Item value="RadioButtonList`0" priority="0" />
+      <Item value="rblist" priority="3" />
+      <Item value="foreach" priority="19" />
+      <Item value="AspCompatBeginProcessRequest`0" priority="0" />
+      <Item value="item" priority="0" />
+      <Item value="Panel`0" priority="2" />
+      <Item value="RequiredFieldValidator`0" priority="0" />
+      <Item value="schoolnamevalidator" priority="1" />
+      <Item value="Profile" priority="5" />
+      <Item value="TextBox`0" priority="2" />
+      <Item value="txtLastname" priority="1" />
+      <Item value="txtSchoolname" priority="2" />
+      <Item value="MembershipUser" priority="2" />
+      <Item value="User" priority="2" />
+      <Item value="Domain" priority="0" />
+      <Item value="Entities" priority="0" />
+      <Item value="txtFirstname" priority="0" />
+      <Item value="School" priority="0" />
+      <Item value="ListItem`0" priority="0" />
+      <Item value="li" priority="0" />
+      <Item value="createSchool" priority="1" />
+      <Item value="IsPostBack" priority="4" />
+      <Item value="Membership`0" priority="1" />
+      <Item value="mu" priority="4" />
+      <Item value="NonSerialized" priority="0" />
+      <Item value="lblSchoolName" priority="0" />
+      <Item value="CompareValidator`0" priority="0" />
+      <Item value="_studentFirstName" priority="2" />
+      <Item value="value" priority="12" />
+      <Item value="_studentLastName" priority="1" />
+      <Item value="_studentDateOfBirth" priority="5" />
+      <Item value="_studentAge" priority="4" />
+      <Item value="CalculateAge`0" priority="1" />
+      <Item value="_isChecked" priority="3" />
+      <Item value="cbStudentSelected" priority="6" />
+      <Item value="lblStudentName" priority="1" />
+      <Item value="lblStudentAge" priority="2" />
+      <Item value="Register" priority="0" />
+      <Item value="IndividualStudentSelector" priority="0" />
+      <Item value="List" priority="17" />
+      <Item value="ChildSelector`0" priority="6" />
+      <Item value="_children" priority="6" />
+      <Item value="List&lt;Child&gt;" priority="3" />
+      <Item value="IndividualChild`0" priority="6" />
+      <Item value="IndividualChild" priority="0" />
+      <Item value="ic" priority="14" />
+      <Item value="pnlStudents" priority="4" />
+      <Item value="ChildSelector" priority="1" />
+      <Item value="ChildAccessor`0" priority="1" />
+      <Item value="NotFiniteNumberException" priority="0" />
+      <Item value="children" priority="4" />
+      <Item value="cs" priority="4" />
+      <Item value="ChildAccessor" priority="0" />
+      <Item value="a" priority="0" />
+      <Item value="Panel" priority="1" />
+      <Item value="this" priority="1" />
+      <Item value="pnlStudentsList" priority="5" />
+      <Item value="Page" priority="0" />
+      <Item value="LoadControl`0" priority="7" />
+      <Item value="ics" priority="5" />
+      <Item value="control" priority="1" />
+      <Item value="List&lt;string&gt;" priority="0" />
+      <Item value="names" priority="2" />
+      <Item value="ctrl" priority="1" />
+      <Item value="Web" priority="0" />
+      <Item value="UI" priority="0" />
+      <Item value="pnlSelectedStudents" priority="6" />
+      <Item value="Collections" priority="0" />
+      <Item value="List&lt;IndividualChild&gt;" priority="1" />
+      <Item value="childselector" priority="0" />
+      <Item value="studentControl" priority="2" />
+      <Item value="protected" priority="4" />
+      <Item value="Repeater`0" priority="0" />
+      <Item value="rpStudentsList" priority="1" />
+      <Item value="DataBinder`0" priority="2" />
+      <Item value="Container" priority="2" />
+      <Item value="_numChildren" priority="5" />
+      <Item value="for" priority="0" />
+      <Item value="i" priority="1" />
+      <Item value="ViewState" priority="14" />
+      <Item value="Int32`0" priority="0" />
+      <Item value="num" priority="3" />
+      <Item value="out" priority="0" />
+      <Item value="_studentName" priority="1" />
+      <Item value="ss" priority="11" />
+      <Item value="String`0" priority="0" />
+      <Item value="StudentDateOfBirth" priority="1" />
+      <Item value="Serializable" priority="0" />
+      <Item value="SelectedStudents`0" priority="1" />
+      <Item value="NumChildren" priority="0" />
+      <Item value="Children" priority="0" />
+      <Item value="hidAccordionIndex" priority="1" />
+      <Item value="BuilderPropertyEntry`0" priority="0" />
+      <Item value="BuildSummary`0" priority="2" />
+      <Item value="BuildSelectedChildrenSummary`0" priority="0" />
+      <Item value="hidRecordType" priority="4" />
+      <Item value="BuildSelectedRecordTypeSummary`0" priority="0" />
+      <Item value="btnRecordActivity" priority="1" />
+      <Item value="btnRecordLesson" priority="0" />
+      <Item value="btnRecordTest" priority="0" />
+      <Item value="lblRecordType" priority="0" />
+      <Item value="RecordType" priority="0" />
+      <Item value="pnlSelectedRecordType" priority="1" />
+      <Item value="rt" priority="1" />
+      <Item value="lblSubjectName" priority="1" />
+      <Item value="cbSubjectSelected" priority="4" />
+      <Item value="SubjectName" priority="0" />
+      <Item value="IndividualSubject`0" priority="2" />
+      <Item value="pnlSubjectsList" priority="1" />
+      <Item value="_subjects" priority="0" />
+      <Item value="subject" priority="5" />
+      <Item value="_numSubjects" priority="0" />
+      <Item value="pnlSubjects" priority="1" />
+      <Item value="List&lt;Subject&gt;" priority="1" />
+      <Item value="results" priority="1" />
+      <Item value="SubjectSelector`0" priority="1" />
+      <Item value="switch" priority="1" />
+      <Item value="case" priority="3" />
+      <Item value="break" priority="4" />
+      <Item value="imgType" priority="2" />
+      <Item value="default" priority="1" />
+      <Item value="pnlSelectedSubjects" priority="4" />
+      <Item value="SelectedSubject`0" priority="0" />
+      <Item value="sub" priority="0" />
+      <Item value="sss" priority="0" />
+      <Item value="subjectControl" priority="2" />
+      <Item value="BuildSelectedSubjectsSummary`0" priority="0" />
+      <Item value="lblDate" priority="0" />
+      <Item value="DateSelected" priority="0" />
+      <Item value="pnlSelectedDate" priority="0" />
+      <Item value="BuildSelectedDateSummary`0" priority="0" />
+      <Item value="btnSelectDate" priority="0" />
+      <Item value="txtRecordDate" priority="1" />
+      <Item value="txtActivityNotes" priority="6" />
+      <Item value="txtActivityName" priority="1" />
+      <Item value="RecordActivity`0" priority="1" />
+      <Item value="ra" priority="4" />
+      <Item value="pnlRecordDetails" priority="0" />
+      <Item value="VerifyRenderingInServerForm`0" priority="0" />
+      <Item value="ThemeableAttribute`0" priority="0" />
+      <Item value="IAppDomainSetup`0" priority="0" />
+      <Item value="GetSelectedStudents`0" priority="0" />
+      <Item value="GetSelectedSubjects`0" priority="0" />
+      <Item value="student" priority="3" />
+      <Item value="activity" priority="16" />
+      <Item value="recordDate" priority="0" />
+      <Item value="activities" priority="0" />
+      <Item value="RecordAccessor`0" priority="0" />
+      <Item value="recordaccessor" priority="0" />
+      <Item value="subjects" priority="0" />
+      <Item value="StudentAccessor`0" priority="0" />
+      <Item value="studentaccessor" priority="0" />
+      <Item value="txtTimeSpent" priority="1" />
+      <Item value="students" priority="0" />
+      <Item value="Response" priority="0" />
+      <Item value="Unchanged" priority="2" />
+      <Item value="hidActivityNotesClientID" priority="1" />
+      <Item value="Reference" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Configuration.ConfigurationManager">
+      <Item value="ConnectionStrings" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Configuration.ConnectionStringSettings">
+      <Item value="ConnectionString" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.DataAccess.HstDBContainer">
+      <Item value="Schools" priority="1" />
+      <Item value="SaveChanges`0" priority="4" />
+      <Item value="Users" priority="14" />
+      <Item value="Children" priority="12" />
+      <Item value="ApplyCurrentValues`1" priority="1" />
+      <Item value="LoadProperty`1" priority="3" />
+      <Item value="Subjects" priority="2" />
+      <Item value="Activities" priority="6" />
+      <Item value="AddObject`0" priority="0" />
+      <Item value="DetectChanges`0" priority="1" />
+      <Item value="ObjectStateManager" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Entities.School">
+      <Item value="Users" priority="1" />
+      <Item value="SchoolName" priority="2" />
+      <Item value="Id" priority="1" />
+      <Item value="DateJoined" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
+      <Item value="Contains`0" priority="2" />
+      <Item value="Any`1" priority="0" />
+      <Item value="Add`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="Count`1" priority="0" />
+      <Item value="First`1" priority="5" />
+      <Item value="AsEnumerable`1" priority="1" />
+      <Item value="ToList`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="AddObject`0" priority="0" />
+      <Item value="Contains`1" priority="0" />
+      <Item value="Attach`0" priority="4" />
+      <Item value="ApplyCurrentValues`0" priority="0" />
+      <Item value="CreateObject`1" priority="0" />
+      <Item value="EntitySet" priority="0" />
+      <Item value="MergeOption" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Entities.User">
+      <Item value="Login" priority="5" />
+      <Item value="PasswordHash" priority="3" />
+      <Item value="IsTeacher" priority="2" />
+      <Item value="NameFirst" priority="2" />
+      <Item value="Email" priority="0" />
+      <Item value="NameLast" priority="1" />
+      <Item value="IsActive" priority="0" />
+      <Item value="SchoolId" priority="0" />
+      <Item value="Id" priority="1" />
+      <Item value="School" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Entities.Child">
+      <Item value="Id" priority="0" />
+      <Item value="Users" priority="1" />
+      <Item value="DateOfBirth" priority="1" />
+      <Item value="NameFirst" priority="1" />
+      <Item value="NameLast" priority="1" />
+      <Item value="Activities" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.DataAccess.SchoolAccessor">
+      <Item value="GetSchoolName`0" priority="0" />
+      <Item value="CreateSchool`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.DataAccess.UserAccessor">
+      <Item value="ChangePassword`0" priority="0" />
+      <Item value="GetUserByLogin`0" priority="3" />
+      <Item value="PersistUser`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Text.Encoding">
+      <Item value="Unicode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.Encoding">
+      <Item value="GetBytes`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Security.Cryptography.HashAlgorithm">
+      <Item value="Create`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Security.Cryptography.HashAlgorithm">
+      <Item value="ComputeHash`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToBase64CharArray`0" priority="0" />
+      <Item value="ToBase64String`0" priority="0" />
+      <Item value="ToInt32`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Hst.Security.Passwords">
+      <Item value="EncodePasswordToBase64`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.RadioButtonList">
+      <Item value="RepeatDirection" priority="0" />
+      <Item value="RepeatColumns" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.CreateUserWizard">
+      <Item value="Controls" priority="0" />
+      <Item value="FindControl`0" priority="1" />
+      <Item value="CreateUserStep" priority="0" />
+      <Item value="Email" priority="1" />
+      <Item value="UserName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Panel">
+      <Item value="Visible" priority="2" />
+      <Item value="Controls" priority="12" />
+      <Item value="FindControl`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListItem">
+      <Item value="Value" priority="0" />
+      <Item value="Selected" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.CreateUserWizardStep">
+      <Item value="ContentTemplate" priority="0" />
+      <Item value="ContentTemplateContainer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Control">
+      <Item value="FindControl`0" priority="2" />
+      <Item value="Controls" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.RequiredFieldValidator">
+      <Item value="EnableClientScript" priority="0" />
+      <Item value="Enabled" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ProfileCommon">
+      <Item value="User" priority="2" />
+      <Item value="Context" priority="0" />
+      <Item value="Save`0" priority="1" />
+      <Item value="FirstName" priority="0" />
+      <Item value="LastActivityDate" priority="0" />
+      <Item value="LastName" priority="0" />
+      <Item value="SchoolName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.TextBox">
+      <Item value="Text" priority="12" />
+      <Item value="ClientID" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Today" priority="5" />
+      <Item value="Parse`0" priority="3" />
+      <Item value="MinValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Security.Membership">
+      <Item value="GetUser`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Security.MembershipUser">
+      <Item value="UserName" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="First`1" priority="2" />
+      <Item value="AsEnumerable`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Label">
+      <Item value="Text" priority="2" />
+      <Item value="ToolTip" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.HtmlControls.HtmlGenericControl">
+      <Item value="style" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="Subtract`0" priority="0" />
+      <Item value="ToShortDateString`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.CheckBox">
+      <Item value="Checked" priority="3" />
+      <Item value="Visible" priority="0" />
+      <Item value="ClientID" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IndividualChild">
+      <Item value="StudentDateOfBirth" priority="1" />
+      <Item value="StudentFirstName" priority="3" />
+      <Item value="StudentLastName" priority="3" />
+      <Item value="ID" priority="1" />
+      <Item value="IsChecked" priority="0" />
+      <Item value="Child" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ControlCollection">
+      <Item value="Add`0" priority="10" />
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ChildSelector">
+      <Item value="Children" priority="2" />
+      <Item value="Controls" priority="0" />
+      <Item value="ID" priority="0" />
+      <Item value="StudentControls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.DataAccess.ChildAccessor">
+      <Item value="GetChildrenByUser`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="9" />
+      <Item value="Count" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="Controls" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Button">
+      <Item value="Click" priority="0" />
+      <Item value="ClientID" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Default2">
+      <Item value="FindControl`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="Key" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Repeater">
+      <Item value="DataSource" priority="0" />
+      <Item value="DataBind`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.DataBinder">
+      <Item value="Eval`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.RepeaterItem">
+      <Item value="DataItem" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="TryParse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SelectedStudent">
+      <Item value="StudentName" priority="0" />
+      <Item value="StudentAge" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Boolean">
+      <Item value="Parse`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.StateBag">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SelectedStudents">
+      <Item value="ID" priority="0" />
+      <Item value="Children" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.HiddenField">
+      <Item value="Value" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.record_aspx">
+      <Item value="btnStudentsSelected" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SelectedRecordType">
+      <Item value="ReadStringResource`0" priority="0" />
+      <Item value="RecordType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IndividualSubject">
+      <Item value="Subject" priority="2" />
+      <Item value="SubjectName" priority="0" />
+      <Item value="IsChecked" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Entities.Subject">
+      <Item value="Name" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SubjectSelector">
+      <Item value="ID" priority="0" />
+      <Item value="Subjects" priority="0" />
+      <Item value="StudentControls" priority="0" />
+      <Item value="SubjectControls" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.DataAccess.SubjectAccessor">
+      <Item value="GetAllSubjects`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Image">
+      <Item value="ImageUrl" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SelectedSubject">
+      <Item value="SubjectName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SelectedSubjects">
+      <Item value="ID" priority="0" />
+      <Item value="Subjects" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SelectedDate">
+      <Item value="DateSelected" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:RecordActivity">
+      <Item value="ID" priority="0" />
+      <Item value="ActivityName" priority="0" />
+      <Item value="ActivityNote" priority="0" />
+      <Item value="TimeSpent" priority="0" />
+      <Item value="ActivityNoteClientID" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Entities.Activity">
+      <Item value="ActivityDate" priority="0" />
+      <Item value="ActivityName" priority="0" />
+      <Item value="Notes" priority="0" />
+      <Item value="Subjects" priority="4" />
+      <Item value="TimeSpent" priority="0" />
+      <Item value="Children" priority="3" />
+      <Item value="Users" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.DataAccess.RecordAccessor">
+      <Item value="PersistActivity`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.DataAccess.StudentAccessor">
+      <Item value="PersistStudent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponse">
+      <Item value="Redirect`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectStateManager">
+      <Item value="ChangeObjectState`0" priority="3" />
+      <Item value="ChangeRelationshipState`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AjaxControlToolkit.HTMLEditor.Editor">
+      <Item value="Content" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HstDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="HstDBStoreContainer">
+    <EntitySet Name="Children" EntityType="HstDB.Store.Children" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="HstDB.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StateRequiredSubjects" EntityType="HstDB.Store.StateRequiredSubjects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subjects" EntityType="HstDB.Store.Subjects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Lessons" EntityType="HstDB.Store.Lessons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Activities" EntityType="HstDB.Store.Activities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tests" EntityType="HstDB.Store.Tests" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestResults" EntityType="HstDB.Store.TestResults" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Schools" EntityType="HstDB.Store.Schools" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChildUser" EntityType="HstDB.Store.ChildUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubjectStateRequiredSubject" EntityType="HstDB.Store.SubjectStateRequiredSubject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChildLesson" EntityType="HstDB.Store.ChildLesson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserLesson" EntityType="HstDB.Store.UserLesson" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LessonSubject" EntityType="HstDB.Store.LessonSubject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChildActivity" EntityType="HstDB.Store.ChildActivity" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserActivity" EntityType="HstDB.Store.UserActivity" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ActivitySubject" EntityType="HstDB.Store.ActivitySubject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Test_TestResult" EntityType="HstDB.Store.Test_TestResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChildTestResult" EntityType="HstDB.Store.ChildTestResult" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestUser" EntityType="HstDB.Store.TestUser" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ChildUser_Child" Association="HstDB.Store.FK_ChildUser_Child">
+      <End Role="Child" EntitySet="Children" />
+      <End Role="ChildUser" EntitySet="ChildUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChildUser_User" Association="HstDB.Store.FK_ChildUser_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ChildUser" EntitySet="ChildUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubjectStateRequiredSubject_Subject" Association="HstDB.Store.FK_SubjectStateRequiredSubject_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="SubjectStateRequiredSubject" EntitySet="SubjectStateRequiredSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SubjectStateRequiredSubject_StateRequiredSubject" Association="HstDB.Store.FK_SubjectStateRequiredSubject_StateRequiredSubject">
+      <End Role="StateRequiredSubject" EntitySet="StateRequiredSubjects" />
+      <End Role="SubjectStateRequiredSubject" EntitySet="SubjectStateRequiredSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChildLesson_Child" Association="HstDB.Store.FK_ChildLesson_Child">
+      <End Role="Child" EntitySet="Children" />
+      <End Role="ChildLesson" EntitySet="ChildLesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChildLesson_Lesson" Association="HstDB.Store.FK_ChildLesson_Lesson">
+      <End Role="Lesson" EntitySet="Lessons" />
+      <End Role="ChildLesson" EntitySet="ChildLesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLesson_User" Association="HstDB.Store.FK_UserLesson_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserLesson" EntitySet="UserLesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLesson_Lesson" Association="HstDB.Store.FK_UserLesson_Lesson">
+      <End Role="Lesson" EntitySet="Lessons" />
+      <End Role="UserLesson" EntitySet="UserLesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LessonSubject_Lesson" Association="HstDB.Store.FK_LessonSubject_Lesson">
+      <End Role="Lesson" EntitySet="Lessons" />
+      <End Role="LessonSubject" EntitySet="LessonSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LessonSubject_Subject" Association="HstDB.Store.FK_LessonSubject_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="LessonSubject" EntitySet="LessonSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChildActivity_Child" Association="HstDB.Store.FK_ChildActivity_Child">
+      <End Role="Child" EntitySet="Children" />
+      <End Role="ChildActivity" EntitySet="ChildActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChildActivity_Activity" Association="HstDB.Store.FK_ChildActivity_Activity">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="ChildActivity" EntitySet="ChildActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserActivity_User" Association="HstDB.Store.FK_UserActivity_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserActivity" EntitySet="UserActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserActivity_Activity" Association="HstDB.Store.FK_UserActivity_Activity">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="UserActivity" EntitySet="UserActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActivitySubject_Activity" Association="HstDB.Store.FK_ActivitySubject_Activity">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="ActivitySubject" EntitySet="ActivitySubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActivitySubject_Subject" Association="HstDB.Store.FK_ActivitySubject_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="ActivitySubject" EntitySet="ActivitySubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Test_TestResult_Test" Association="HstDB.Store.FK_Test_TestResult_Test">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="Test_TestResult" EntitySet="Test_TestResult" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Test_TestResult_TestResult" Association="HstDB.Store.FK_Test_TestResult_TestResult">
+      <End Role="TestResult" EntitySet="TestResults" />
+      <End Role="Test_TestResult" EntitySet="Test_TestResult" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChildTestResult_Child" Association="HstDB.Store.FK_ChildTestResult_Child">
+      <End Role="Child" EntitySet="Children" />
+      <End Role="ChildTestResult" EntitySet="ChildTestResult" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChildTestResult_TestResult" Association="HstDB.Store.FK_ChildTestResult_TestResult">
+      <End Role="TestResult" EntitySet="TestResults" />
+      <End Role="ChildTestResult" EntitySet="ChildTestResult" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestUser_Test" Association="HstDB.Store.FK_TestUser_Test">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="TestUser" EntitySet="TestUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestUser_User" Association="HstDB.Store.FK_TestUser_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="TestUser" EntitySet="TestUser" />
+    </AssociationSet>
+    <AssociationSet Name="ChildSchool" Association="HstDB.Store.ChildSchool">
+      <End Role="Child" EntitySet="Children" />
+      <End Role="School" EntitySet="Schools" />
+    </AssociationSet>
+    <AssociationSet Name="UserSchool" Association="HstDB.Store.UserSchool">
+      <End Role="User" EntitySet="Users" />
+      <End Role="School" EntitySet="Schools" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Children">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameFirst" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NameLast" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateOfBirth" Type="datetime" Nullable="false" />
+    <Property Name="SchoolId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NameFirst" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NameLast" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsTeacher" Type="bit" Nullable="false" />
+    <Property Name="SchoolId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="StateRequiredSubjects">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lessons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LessonTitle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LessonDate" Type="datetime" Nullable="false" />
+    <Property Name="TimeSpent" Type="time" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Activities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ActivityDate" Type="datetime" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TimeSpent" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tests">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Questions" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestResults">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Correct" Type="int" Nullable="false" />
+    <Property Name="NotAnswered" Type="int" Nullable="false" />
+    <Property Name="Incorrect" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Schools">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SchoolName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateJoined" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChildUser">
+    <Key>
+      <PropertyRef Name="Children_Id" />
+      <PropertyRef Name="Users_Id" />
+    </Key>
+    <Property Name="Children_Id" Type="int" Nullable="false" />
+    <Property Name="Users_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubjectStateRequiredSubject">
+    <Key>
+      <PropertyRef Name="Subjects_Id" />
+      <PropertyRef Name="StateRequiredSubjects_Id" />
+    </Key>
+    <Property Name="Subjects_Id" Type="int" Nullable="false" />
+    <Property Name="StateRequiredSubjects_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChildLesson">
+    <Key>
+      <PropertyRef Name="Children_Id" />
+      <PropertyRef Name="Lessons_Id" />
+    </Key>
+    <Property Name="Children_Id" Type="int" Nullable="false" />
+    <Property Name="Lessons_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLesson">
+    <Key>
+      <PropertyRef Name="Users_Id" />
+      <PropertyRef Name="Lessons_Id" />
+    </Key>
+    <Property Name="Users_Id" Type="int" Nullable="false" />
+    <Property Name="Lessons_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LessonSubject">
+    <Key>
+      <PropertyRef Name="Lessons_Id" />
+      <PropertyRef Name="Subjects_Id" />
+    </Key>
+    <Property Name="Lessons_Id" Type="int" Nullable="false" />
+    <Property Name="Subjects_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChildActivity">
+    <Key>
+      <PropertyRef Name="Children_Id" />
+      <PropertyRef Name="Activities_Id" />
+    </Key>
+    <Property Name="Children_Id" Type="int" Nullable="false" />
+    <Property Name="Activities_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserActivity">
+    <Key>
+      <PropertyRef Name="Users_Id" />
+      <PropertyRef Name="Activities_Id" />
+    </Key>
+    <Property Name="Users_Id" Type="int" Nullable="false" />
+    <Property Name="Activities_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ActivitySubject">
+    <Key>
+      <PropertyRef Name="Activities_Id" />
+      <PropertyRef Name="Subjects_Id" />
+    </Key>
+    <Property Name="Activities_Id" Type="int" Nullable="false" />
+    <Property Name="Subjects_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Test_TestResult">
+    <Key>
+      <PropertyRef Name="Tests_Id" />
+      <PropertyRef Name="TestResults_Id" />
+    </Key>
+    <Property Name="Tests_Id" Type="int" Nullable="false" />
+    <Property Name="TestResults_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChildTestResult">
+    <Key>
+      <PropertyRef Name="Children_Id" />
+      <PropertyRef Name="TestResults_Id" />
+    </Key>
+    <Property Name="Children_Id" Type="int" Nullable="false" />
+    <Property Name="TestResults_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestUser">
+    <Key>
+      <PropertyRef Name="Tests_Id" />
+      <PropertyRef Name="Users_Id" />
+    </Key>
+    <Property Name="Tests_Id" Type="int" Nullable="false" />
+    <Property Name="Users_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ChildSchool">
+    <End Role="Child" Type="HstDB.Store.Children" Multiplicity="*" />
+    <End Role="School" Type="HstDB.Store.Schools" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Child">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserSchool">
+    <End Role="User" Type="HstDB.Store.Users" Multiplicity="*" />
+    <End Role="School" Type="HstDB.Store.Schools" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChildUser_Child">
+    <End Role="Child" Type="HstDB.Store.Children" Multiplicity="1" />
+    <End Role="ChildUser" Type="HstDB.Store.ChildUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Child">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChildUser">
+        <PropertyRef Name="Children_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChildUser_User">
+    <End Role="ChildUser" Type="HstDB.Store.ChildUser" Multiplicity="*" />
+    <End Role="User" Type="HstDB.Store.Users" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChildUser">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubjectStateRequiredSubject_Subject">
+    <End Role="Subject" Type="HstDB.Store.Subjects" Multiplicity="1" />
+    <End Role="SubjectStateRequiredSubject" Type="HstDB.Store.SubjectStateRequiredSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SubjectStateRequiredSubject">
+        <PropertyRef Name="Subjects_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SubjectStateRequiredSubject_StateRequiredSubject">
+    <End Role="SubjectStateRequiredSubject" Type="HstDB.Store.SubjectStateRequiredSubject" Multiplicity="*" />
+    <End Role="StateRequiredSubject" Type="HstDB.Store.StateRequiredSubjects" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="StateRequiredSubject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SubjectStateRequiredSubject">
+        <PropertyRef Name="StateRequiredSubjects_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChildLesson_Child">
+    <End Role="Child" Type="HstDB.Store.Children" Multiplicity="1" />
+    <End Role="ChildLesson" Type="HstDB.Store.ChildLesson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Child">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChildLesson">
+        <PropertyRef Name="Children_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChildLesson_Lesson">
+    <End Role="ChildLesson" Type="HstDB.Store.ChildLesson" Multiplicity="*" />
+    <End Role="Lesson" Type="HstDB.Store.Lessons" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Lesson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChildLesson">
+        <PropertyRef Name="Lessons_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLesson_User">
+    <End Role="User" Type="HstDB.Store.Users" Multiplicity="1" />
+    <End Role="UserLesson" Type="HstDB.Store.UserLesson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserLesson">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLesson_Lesson">
+    <End Role="UserLesson" Type="HstDB.Store.UserLesson" Multiplicity="*" />
+    <End Role="Lesson" Type="HstDB.Store.Lessons" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Lesson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserLesson">
+        <PropertyRef Name="Lessons_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LessonSubject_Lesson">
+    <End Role="Lesson" Type="HstDB.Store.Lessons" Multiplicity="1" />
+    <End Role="LessonSubject" Type="HstDB.Store.LessonSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lesson">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LessonSubject">
+        <PropertyRef Name="Lessons_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LessonSubject_Subject">
+    <End Role="LessonSubject" Type="HstDB.Store.LessonSubject" Multiplicity="*" />
+    <End Role="Subject" Type="HstDB.Store.Subjects" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LessonSubject">
+        <PropertyRef Name="Subjects_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChildActivity_Child">
+    <End Role="Child" Type="HstDB.Store.Children" Multiplicity="1" />
+    <End Role="ChildActivity" Type="HstDB.Store.ChildActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Child">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChildActivity">
+        <PropertyRef Name="Children_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChildActivity_Activity">
+    <End Role="ChildActivity" Type="HstDB.Store.ChildActivity" Multiplicity="*" />
+    <End Role="Activity" Type="HstDB.Store.Activities" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChildActivity">
+        <PropertyRef Name="Activities_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserActivity_User">
+    <End Role="User" Type="HstDB.Store.Users" Multiplicity="1" />
+    <End Role="UserActivity" Type="HstDB.Store.UserActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserActivity">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserActivity_Activity">
+    <End Role="UserActivity" Type="HstDB.Store.UserActivity" Multiplicity="*" />
+    <End Role="Activity" Type="HstDB.Store.Activities" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserActivity">
+        <PropertyRef Name="Activities_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActivitySubject_Activity">
+    <End Role="Activity" Type="HstDB.Store.Activities" Multiplicity="1" />
+    <End Role="ActivitySubject" Type="HstDB.Store.ActivitySubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ActivitySubject">
+        <PropertyRef Name="Activities_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActivitySubject_Subject">
+    <End Role="ActivitySubject" Type="HstDB.Store.ActivitySubject" Multiplicity="*" />
+    <End Role="Subject" Type="HstDB.Store.Subjects" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ActivitySubject">
+        <PropertyRef Name="Subjects_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Test_TestResult_Test">
+    <End Role="Test" Type="HstDB.Store.Tests" Multiplicity="1" />
+    <End Role="Test_TestResult" Type="HstDB.Store.Test_TestResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Test_TestResult">
+        <PropertyRef Name="Tests_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Test_TestResult_TestResult">
+    <End Role="Test_TestResult" Type="HstDB.Store.Test_TestResult" Multiplicity="*" />
+    <End Role="TestResult" Type="HstDB.Store.TestResults" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="TestResult">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Test_TestResult">
+        <PropertyRef Name="TestResults_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChildTestResult_Child">
+    <End Role="Child" Type="HstDB.Store.Children" Multiplicity="1" />
+    <End Role="ChildTestResult" Type="HstDB.Store.ChildTestResult" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Child">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChildTestResult">
+        <PropertyRef Name="Children_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChildTestResult_TestResult">
+    <End Role="ChildTestResult" Type="HstDB.Store.ChildTestResult" Multiplicity="*" />
+    <End Role="TestResult" Type="HstDB.Store.TestResults" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="TestResult">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChildTestResult">
+        <PropertyRef Name="TestResults_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestUser_Test">
+    <End Role="Test" Type="HstDB.Store.Tests" Multiplicity="1" />
+    <End Role="TestUser" Type="HstDB.Store.TestUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestUser">
+        <PropertyRef Name="Tests_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestUser_User">
+    <End Role="TestUser" Type="HstDB.Store.TestUser" Multiplicity="*" />
+    <End Role="User" Type="HstDB.Store.Users" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestUser">
+        <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
