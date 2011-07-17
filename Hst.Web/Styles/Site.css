@@ -650,3 +650,40 @@ fieldset p fieldset.summary
 	width: 100%;
 	margin-top: 15px;
 }
+
+.timeSelectButton
+{
+    width: 150px;
+    height: 30px;
+    display: block;
+    color: #001188;
+    font-size: medium;
+    float: left;
+}
+
+.timeSelectButton-selected
+{
+    width: 150px;
+    height: 30px;
+    display: block;
+    color: #008800;
+    font-size: medium;
+    float: left;
+}
+
+.timeSelectButton-rb
+{
+    float: left;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 2px solid #FFFFFF;
+}
+
+.timeSelectButton-txt
+{
+    float: left;
+    width: 118px;
+    text-align: center;
+    vertical-align: middle;
+}

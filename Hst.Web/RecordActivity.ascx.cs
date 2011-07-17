@@ -7,6 +7,12 @@ using System.Web.UI.WebControls;
 
 public partial class RecordActivity : System.Web.UI.UserControl
 {
+    protected override void  OnInit(EventArgs e)
+    {
+ 	    base.OnInit(e);
+        var script = "rb()";
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "rbscript", script, true);
+    }
     protected void Page_Load(object sender, EventArgs e)
     {
 

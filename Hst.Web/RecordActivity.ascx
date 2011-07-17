@@ -17,7 +17,18 @@
         Time Spent</div>
     <!-- Left column -->
     <div class="rightRecordDetailsColumn">
+        <asp:RadioButtonList ID="rbTimeSpent" runat="server" RepeatDirection="Horizontal">
+            <asp:ListItem Text="15m" Value="15"></asp:ListItem>
+            <asp:ListItem Text="30m" Value="30"></asp:ListItem>
+            <asp:ListItem Text="60m" Value="60"></asp:ListItem>
+            <asp:ListItem Text="Custom" Value="15"></asp:ListItem>
+        </asp:RadioButtonList>
         <asp:TextBox ID="txtTimeSpent" runat="server"></asp:TextBox></div>
+        <script type="text/javascript">
+            function rb () {
+                $('#<%= rbTimeSpent.ClientID %>').buttonset();
+            }
+        </script>
     <!-- Right column -->
 </div>
 <!-- Activity Notes -->
