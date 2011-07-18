@@ -24,19 +24,19 @@ namespace Hst.DataAccess
         public HstDBContainer()
             : base(ConnectionString, ContainerName)
         {
-            this.ContextOptions.LazyLoadingEnabled = true;
+            this.ContextOptions.LazyLoadingEnabled = false;
         }
     
         public HstDBContainer(string connectionString)
             : base(connectionString, ContainerName)
         {
-            this.ContextOptions.LazyLoadingEnabled = true;
+            this.ContextOptions.LazyLoadingEnabled = false;
         }
     
         public HstDBContainer(EntityConnection connection)
             : base(connection, ContainerName)
         {
-            this.ContextOptions.LazyLoadingEnabled = true;
+            this.ContextOptions.LazyLoadingEnabled = false;
         }
     
         #endregion

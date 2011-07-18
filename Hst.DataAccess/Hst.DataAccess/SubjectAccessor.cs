@@ -33,6 +33,25 @@ namespace Hst.DataAccess
             return results;
         }
 
+        public List<Subject> GetSubjectsByIds(List<int> ids)
+        {
+            var results = new List<Subject>();
+
+            using (var db = new HstDBContainer(_connectionString))
+            {
+                var subjects = (from s in db.Subjects
+                                where ids.Contains(s.Id)
+                                select s).AsEnumerable();
+
+                foreach (var subject in subjects)
+                {
+                    results.Add(subject);
+                }
+            }
+
+            return results;
+        }
+
         public void PersistSubject(Subject subject)
         {
             using (var db = new HstDBContainer(_connectionString))

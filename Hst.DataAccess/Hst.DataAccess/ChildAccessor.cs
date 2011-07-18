@@ -56,6 +56,25 @@ namespace Hst.DataAccess
             return result;
         }
 
+        public List<Child> GetChildrenByIds(List<int> ids)
+        {
+            var result = new List<Child>();
+
+            using (var db = new HstDBContainer(_connectionString))
+            {
+                var children = (from c in db.Children
+                                where ids.Contains(c.Id)
+                                select c).AsEnumerable();
+
+                foreach (var child in children)
+                {
+                    result.Add(child);
+                }
+            }
+
+            return result;
+        }
+
 
     }
 }

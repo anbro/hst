@@ -687,3 +687,114 @@ fieldset p fieldset.summary
     text-align: center;
     vertical-align: middle;
 }
+
+
+
+/* New version classes */
+.stepContainer
+{
+    width: 79%;
+    display: block;
+
+    float: left;
+}
+
+.stepLeft
+{
+    width: 160px;
+    float: left;
+    font-size: large;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.stepFloat
+{
+    float: left;    
+}
+
+.stepTitle
+{
+    font-size: x-large;
+    font-weight: bold;
+    width: 100%;
+    float: left;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.stepContentContainer
+{
+    width: 760px;
+    display: block;
+    float: left;
+}
+
+.stepContent
+{
+    width: 100%;
+    display: block;
+    float: left;
+    padding: 0px;
+}
+
+
+.studentselectorcb
+{
+    width: 28%;
+    margin: 20px 10px 20px 10px  !important;
+    
+}
+
+.subjectselectortop
+{
+    display: block;
+    height: 10px;
+    width: 100%;
+}
+
+.subjectselectorcb
+{
+    width: 22%;
+    margin: 10px 10px 10px 10px  !important;
+    
+}
+
+.recordtypeselectorrb
+{
+    margin: 20px 10px 20px 10px  !important;
+}
+
+.commandcontainer
+{
+    padding-right: 20px;
+    padding-bottom: 30px;
+    width: 900px;
+
+	float: left;
+	margin-top: 30px;
+	padding-top: 10px;
+	text-align: right;
+}
+
+
+.container
+{
+    width: 100%;
+    border: 1px solid #000000;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+input.minutebox
+{
+    width: 40px;
+    margin-left: 20px;
+}
+
+input.recordname
+{
+    width: 400px;
+}
