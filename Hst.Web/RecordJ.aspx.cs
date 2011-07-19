@@ -115,4 +115,62 @@ public partial class RecordJ : System.Web.UI.Page
             }
         }
     }
+
+    [WebMethod]
+    [OperationContract]
+    public static void SaveLesson(List<int> studentids, List<int> subjectids, string date, string lessonTitle, string lessonDescription, string timeSpent)
+    {
+        int time = 0;
+        bool timeValid = Int32.TryParse(timeSpent, out time);
+
+        if (!timeValid)
+        {
+            throw new ArgumentException("timeSpent must be a valid number of minutes");
+        }
+
+        // Verify the currentuser is a teacher for this school
+        var ua = new UserAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var recordaccessor = new RecordAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var subjectaccessor = new SubjectAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var childaccessor = new ChildAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+
+        var mu = Membership.GetUser();
+
+        if (mu != null)
+        {
+            var user = ua.GetUserByLogin(mu.UserName);
+
+            if (user.IsTeacher)
+            {
+                // Get the students involved
+                var students = childaccessor.GetChildrenByIds(studentids);
+
+                // Get the subjects involved
+                var subjects = subjectaccessor.GetSubjectsByIds(subjectids);
+
+                // Get the date
+                var recordDate = DateTime.Parse(date);
+
+                // Get the details
+                var lesson = new Lesson();
+                lesson.LessonDate = recordDate;
+                lesson.LessonTitle = lessonTitle;
+                lesson.Notes = lessonDescription;
+                lesson.TimeSpent = new TimeSpan(0, time, 0);
+                lesson.Users.Add(user);
+
+                foreach (var subject in subjects)
+                {
+                    lesson.Subjects.Add(subject);
+                }
+
+                foreach (var student in students)
+                {
+                    lesson.Children.Add(student);
+                }
+
+                recordaccessor.PersistLesson(lesson);
+            }
+        }
+    }
 }

@@ -17,6 +17,8 @@
         });
 
         $('#record').corner();
+        $('.testresulttitle').corner();
+        $('.testresultcontainer').corner();
         // Hide all the irrelevant screens
 
         $('#details-activity').hide();
@@ -28,6 +30,8 @@
         $('#activitytimespentlist').addClass('recordtypeselectorrb');
         $('#txtActivityCustomTime').hide();
         $('#ltxtActivityCustomTime').hide();
+        $('#btnSaveLesson').hide();
+        $('#btnSaveActivity').hide();
         $('#rbActivityCustom').click(function () {
             $('#txtActivityCustomTime').show();
             $('#ltxtActivityCustomTime').show();
@@ -53,26 +57,46 @@
 
         $('#rbActivity').click(function () {
             $('#details-activity').show();
+            $('#btnSaveActivity').show();
             $('#details-lesson').hide();
+            $('#btnSaveLesson').hide();
             $('#details-test').hide();
+            $('#recordtype_name').text("Activity Name");
+
         });
 
         $('#rbLesson').click(function () {
-            $('#details-activity').hide();
-            $('#details-lesson').show();
+            $('#details-activity').show();
+            $('#btnSaveActivity').hide();
+            //$('#details-lesson').show();
+            $('#btnSaveLesson').show();
             $('#details-test').hide();
+            $('#recordtype_name').text("Lesson Title");
+
         });
 
         $('#rbTest').click(function () {
             $('#details-activity').hide();
             $('#details-lesson').hide();
             $('#details-test').show();
+
+            // Create all appropriate testresult objects based on selected students
+
         });
 
         $('#btnResetActivity').button({
             icons: { primary: "ui-icon-alert" }
         });
         $('#btnSaveActivity').button({
+            icons: { primary: "ui-icon-circle-check" }
+        });
+        $('#btnSaveLesson').button({
+            icons: { primary: "ui-icon-circle-check" }
+        });
+        $('#btnResetTest').button({
+            icons: { primary: "ui-icon-alert" }
+        });
+        $('#btnSaveTest').button({
             icons: { primary: "ui-icon-circle-check" }
         });
 
@@ -87,7 +111,7 @@
                 var s = json.d;
 
                 for (var i = 0; i < s.length; i++) {
-                    $('#subjectslist').append("<input id='subject_" + s[i].Id + "' type='checkbox' value='" + s[i].Id + "' /><label id='lsubject_" + s[i].Id + "' for='subject_" + s[i].Id + "'>" + s[i].Name + "</label>");
+                    $('#subjectslist').append("<input id='subject_" + s[i].Id + "' name='subjects' type='checkbox' value='" + s[i].Id + "' /><label id='lsubject_" + s[i].Id + "' for='subject_" + s[i].Id + "'>" + s[i].Name + "</label>");
                 }
 
                 $('input[id^="subject_"]')
@@ -138,7 +162,7 @@
                         })
                         .filter(":checked").button({ icons: { primary: "ui-icon-circle-check"} });
                     $('[id^="lstu_"]').addClass('studentselectorcb');
-                    //$('#involvedstudentslist').append("<label name='students' for='students' class='error'></label>");
+                    //$('#involvedstudentslist').append("<div name='students'></label>");
                 }
 
             });
@@ -146,8 +170,36 @@
 
     });
 
+    function createTestResultControls()
+    {
+        // Get all selected students
+        var studentids = [][1];
+        var studentcounter = 0;
+        $('input[id^="student_"]:checked').each(function(index, value) {
+//                        <div class="testresultcontainer" id="studenttr_">
+//                            <div class="testresulttitle ui-state-active">Olivia Brown</div>
+//                            <div class="testlabel">Correct</div>
+//                            <div class="testinputarea"><input type="text" class="testresult" /></div>
+//                            <div class="testlabel">Not/Answered</div>
+//                            <div class="testinputarea"><input type="text" class="testresult" /></div>
+//                            <div class="testlabel">Incorrect</div>
+//                            <div class="testinputarea"><input type="text" class="testresult" /></div>
+//                            <div class="testlabel"></div>
+//                        </div>
+            
+
+
+            studentids[studentcounter][0] = Number($(value).val());
+            studentids[studentcounter][1] = String($(value).text());
+            studentcounter++;
+        });
+
+
+    }
+
     function submitActivityData()
     {
+        tinyMCE.get("txtActivityDescription").save();
         $('#main').validate({
             rules: {
                 selecteddate: {
@@ -157,8 +209,16 @@
                 students: {
                     required: true,
                     minlength: 1
-                }
-
+                },
+                subjects: {
+                    required: true,
+                    minlength: 1
+                },
+                ActivityDescription: { required: true },
+                TimeSpentActivity: {
+                    required: true
+                },
+                txtActivityDescription: { required: true }
             },
             messages: {
                 selecteddate: {
@@ -168,12 +228,29 @@
                 students: {
                     required: "You must select at least one student.",
                     minlength: "You must select at least one student."
+                },
+                subjects: {
+                    required: "You must select at least one subject.",
+                    minlength: "You must select at least one subject."
                 }
+            },
+            errorPlacement: function (error, element) {
+                if (element.is("input:checkbox") || element.is("input:radio")) {
+                    element.parent().parent().append("<div style='margin-left:10px;margin-bottom:10px;'></div>");
+                    error.appendTo(element.parent().parent().children().last()); 
+                    //element.parent().parent().append("</div>");
+                    element.parent().parent().addClass("ui-state-error");                   
+                }
+                if (element.is("input:text")) {                    
+                    error.appendTo(element.parent());
+                    element.parent().parent().addClass("ui-state-error");                   
+                }
+                
+            },
+            success: function (label) {
+                label.parent().parent().removeClass("ui-state-error");
             }
-//            },
-//            errorPlacement: function (error, element) {
-//                $(element).closest('[name=students]').after(error)
-//            }
+            //errorClass: "ui-state-error"
         });
 
 
@@ -198,11 +275,11 @@
 
         var activityname = $('#txtActivityName').val();
 
-        var timespent = $('input[name=TimeSpent-Activity]:checked').val();
+        var timespent = $('input[name=TimeSpentActivity]:checked').val();
         if (timespent == "custom") {
             timespent = $('#txtActivityCustomTime').val();
         }
-        tinyMCE.get("txtActivityDescription").save();
+        
         var activitydescription = $('#txtActivityDescription').val();
 
         var DTO = {
@@ -229,6 +306,112 @@
         if (msg.hasOwnProperty("d")) { msg = msg.d; }
             alert(msg);           
     }
+
+    function submitLessonData() {
+        tinyMCE.get("txtActivityDescription").save();
+        $('#main').validate({
+            rules: {
+                selecteddate: {
+                    required: true,
+                    date: true
+                },
+                students: {
+                    required: true,
+                    minlength: 1
+                },
+                subjects: {
+                    required: true,
+                    minlength: 1
+                },
+                ActivityDescription: { required: true },
+                TimeSpentActivity: {
+                    required: true
+                },
+                txtActivityDescription: { required: true }
+            },
+            messages: {
+                selecteddate: {
+                    required: "You must enter a date.",
+                    date: "Please enter a date."
+                },
+                students: {
+                    required: "You must select at least one student.",
+                    minlength: "You must select at least one student."
+                },
+                subjects: {
+                    required: "You must select at least one subject.",
+                    minlength: "You must select at least one subject."
+                }
+            },
+            errorPlacement: function (error, element) {
+                if (element.is("input:checkbox") || element.is("input:radio")) {
+                    element.parent().parent().append("<div style='margin-left:10px;margin-bottom:10px;'></div>");
+                    error.appendTo(element.parent().parent().children().last()); 
+                    //element.parent().parent().append("</div>");
+                    element.parent().parent().addClass("ui-state-error");                   
+                }
+                if (element.is("input:text")) {                    
+                    error.appendTo(element.parent());
+                    element.parent().parent().addClass("ui-state-error");                   
+                }
+                
+            },
+            success: function (label) {
+                label.parent().parent().removeClass("ui-state-error");
+            }
+            //errorClass: "ui-state-error"
+        });
+
+
+        if (!$('#main').valid()) {
+            return false;
+        }
+        var subjectids = [];
+        var subjectcounter = 0;
+        $('input[id^="subject_"]:checked').each(function(index, value) {
+            subjectids[subjectcounter] = Number($(value).val());
+            subjectcounter++;
+        });
+
+        var studentids = [];
+        var studentcounter = 0;
+        $('input[id^="student_"]:checked').each(function(index, value) {
+            studentids[studentcounter] = Number($(value).val());
+            studentcounter++;
+        });
+
+        var recorddate = String($('#selecteddate').val());
+
+        var activityname = $('#txtActivityName').val();
+
+        var timespent = $('input[name=TimeSpentActivity]:checked').val();
+        if (timespent == "custom") {
+            timespent = $('#txtActivityCustomTime').val();
+        }
+        
+        var activitydescription = $('#txtActivityDescription').val();
+
+        var DTO = {
+            "studentids" : studentids,
+            "subjectids" : subjectids,
+            "date" : recorddate,
+            "lessonTitle" : activityname,
+            "lessonDescription" : activitydescription,
+            "timeSpent" : timespent
+        }
+
+        // ok, now let's make the ajax call
+        $.ajax({
+                type: "POST",
+                url: "RecordJ.aspx/SaveLesson",
+                dataType: "json",
+                data: JSON.stringify(DTO),
+                contentType: "application/json; charset=utf-8",
+                success: submitActivityResponse
+        
+        });
+    }
+
 
 </script>
 </asp:Content>
@@ -287,12 +470,12 @@
     </div>
     <div id="details-activity" class="stepFloat">
         <div class="stepFloat">
-            <div class="stepLeft">
+            <div class="stepLeft" id="recordtype_name">
                 Activity Name</div>
             <div class="stepContainer" id="details-activity-name">
                 <div class="stepContentContainer">
                     <div class="stepContent recordtypeselectorrb">
-                        <input type="text" id="txtActivityName" class="recordname" />
+                        <input type="text" id="txtActivityName" name="ActivityDescription" class="recordname" />
                     </div>
                 </div>
             </div>
@@ -303,16 +486,16 @@
             <div class="stepContainer" id="details-activity-timespent">
                 <div class="stepContentContainer">
                     <div class="stepContent" id="activitytimespentlist">
-                        <input type="radio" value="15" name="TimeSpent-Activity" id="rbActivity15m" />
+                        <input type="radio" value="15" name="TimeSpentActivity" id="rbActivity15m" />
                         <label for="rbActivity15m" id="lrbActivity15m">
                             15 minutes</label>
-                        <input type="radio" value="30" name="TimeSpent-Activity" id="rbActivity30m" />
+                        <input type="radio" value="30" name="TimeSpentActivity" id="rbActivity30m" />
                         <label for="rbActivity30m" id="lrbActivity30m">
                             30 minutes</label>
-                        <input type="radio" value="60" name="TimeSpent-Activity" id="rbActivity60m" />
+                        <input type="radio" value="60" name="TimeSpentActivity" id="rbActivity60m" />
                         <label for="rbActivity60m" id="lrbActivity60m">
                             60 minutes</label>
-                        <input type="radio" value="custom" name="TimeSpent-Activity" id="rbActivityCustom" />
+                        <input type="radio" value="custom" name="TimeSpentActivity" id="rbActivityCustom" />
                         <label for="rbActivityCustom" id="lrbActivityCustom">
                             Custom</label>
                         <input type="text" id="txtActivityCustomTime" class="minutebox" />
@@ -336,28 +519,56 @@
         <div class="commandcontainer">
             <button id="btnResetActivity" title="Reset">Reset</button>
             <button id="btnSaveActivity" title="Save" type="submit" onclick="submitActivityData()">Save and reset</button>            
-        </div>
-    </div>
-    <div id="details-lesson" class="stepFloat">
-    <div class="stepLeft">Lesson</div>
-        <div class="stepContainer" id="details-lesson-content">
-            <div class="stepContentContainer">
-                <div class="stepContent">
-                    
-                </div>
-            </div>
+            <button id="btnSaveLesson" title="Save" type="submit" onclick="submitLessonData()">Save and reset</button>
         </div>
     </div>
     <div id="details-test" class="stepFloat">
-    <div class="stepLeft">Test</div>
-        <div class="stepContainer" id="details-test-content">
-            <div class="stepContentContainer">
-                <div class="stepContent recordtypeselectorrb">
-                    
+        <div class="stepFloat">
+            <div class="stepLeft" id="recordtype_test_name">
+                Test Name</div>
+            <div class="stepContainer" id="Div2">
+                <div class="stepContentContainer">
+                    <div class="stepContent recordtypeselectorrb">
+                        <input type="text" id="txtTestName" name="TestName" class="recordname" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="stepFloat">
+            <div class="stepLeft" id="Div1">
+                Total Questions</div>
+            <div class="stepContainer" id="Div3">
+                <div class="stepContentContainer">
+                    <div class="stepContent recordtypeselectorrb">
+                        <input type="text" id="txtTotalQuestions" name="TotalQuestions" class="recordname" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stepFloat">
+            <div class="stepLeft" id="Div4">
+                Test Results</div>
+            <div class="stepContainer" id="Div5">
+                <div class="stepContentContainer">
+                    <div class="stepContent recordtypeselectorrb">
+                        <div class="testresultcontainer" id="studenttr_">
+                            <div class="testresulttitle ui-state-active">Olivia Brown</div>
+                            <div class="testlabel">Correct</div>
+                            <div class="testinputarea"><input type="text" class="testresult" /></div>
+                            <div class="testlabel">Not/Answered</div>
+                            <div class="testinputarea"><input type="text" class="testresult" /></div>
+                            <div class="testlabel">Incorrect</div>
+                            <div class="testinputarea"><input type="text" class="testresult" /></div>
+                            <div class="testlabel"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="commandcontainer">
+            <button id="btnResetTest" title="Reset">Reset</button>
+            <button id="btnSaveTest" title="Save" type="submit" onclick="submitTestData()">Save and reset</button>            
+        </div>
     </div>
 
 </asp:Content>

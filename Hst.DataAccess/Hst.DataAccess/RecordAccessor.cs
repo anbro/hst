@@ -16,6 +16,44 @@ namespace Hst.DataAccess
 
         private string _connectionString;
 
+        public void PersistLesson(Lesson lesson)
+        {
+            using (var db = new HstDBContainer(_connectionString))
+            {
+                var lessons = from l in db.Lessons
+                              where l.Id == lesson.Id
+                              select l;
+
+                if (lessons.Count() > 0)
+                {
+                    db.Lessons.Attach(lesson);
+                    db.Lessons.ApplyCurrentValues(lesson);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    db.Lessons.AddObject(lesson);
+                    foreach (var child in lesson.Children)
+                    {
+                        db.ObjectStateManager.ChangeObjectState(child, EntityState.Unchanged);
+                    }
+
+                    foreach (var subject in lesson.Subjects)
+                    {
+                        db.ObjectStateManager.ChangeObjectState(subject, EntityState.Unchanged);
+                    }
+
+                    foreach (var user in lesson.Users)
+                    {
+                        db.ObjectStateManager.ChangeObjectState(user, EntityState.Unchanged);
+                    }
+
+                    db.DetectChanges();
+                    db.SaveChanges();
+                }
+            }
+        }
+
         public void PersistActivity(Activity activity)
         {
             using (var db = new HstDBContainer(_connectionString))
