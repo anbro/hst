@@ -130,6 +130,38 @@ namespace Hst.Domain.Entities
             }
         }
         private ICollection<Activity> _activities;
+    
+        public virtual ICollection<Test> Tests
+        {
+            get
+            {
+                if (_tests == null)
+                {
+                    var newCollection = new FixupCollection<Test>();
+                    newCollection.CollectionChanged += FixupTests;
+                    _tests = newCollection;
+                }
+                return _tests;
+            }
+            set
+            {
+                if (!ReferenceEquals(_tests, value))
+                {
+                    var previousValue = _tests as FixupCollection<Test>;
+                    if (previousValue != null)
+                    {
+                        previousValue.CollectionChanged -= FixupTests;
+                    }
+                    _tests = value;
+                    var newValue = value as FixupCollection<Test>;
+                    if (newValue != null)
+                    {
+                        newValue.CollectionChanged += FixupTests;
+                    }
+                }
+            }
+        }
+        private ICollection<Test> _tests;
 
         #endregion
         #region Association Fixup
@@ -200,6 +232,31 @@ namespace Hst.Domain.Entities
             if (e.OldItems != null)
             {
                 foreach (Activity item in e.OldItems)
+                {
+                    if (item.Subjects.Contains(this))
+                    {
+                        item.Subjects.Remove(this);
+                    }
+                }
+            }
+        }
+    
+        private void FixupTests(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if (e.NewItems != null)
+            {
+                foreach (Test item in e.NewItems)
+                {
+                    if (!item.Subjects.Contains(this))
+                    {
+                        item.Subjects.Add(this);
+                    }
+                }
+            }
+    
+            if (e.OldItems != null)
+            {
+                foreach (Test item in e.OldItems)
                 {
                     if (item.Subjects.Contains(this))
                     {

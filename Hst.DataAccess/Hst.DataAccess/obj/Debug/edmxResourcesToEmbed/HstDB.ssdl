@@ -21,6 +21,7 @@
     <EntitySet Name="Test_TestResult" EntityType="HstDB.Store.Test_TestResult" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ChildTestResult" EntityType="HstDB.Store.ChildTestResult" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TestUser" EntityType="HstDB.Store.TestUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestSubject" EntityType="HstDB.Store.TestSubject" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_ChildUser_Child" Association="HstDB.Store.FK_ChildUser_Child">
       <End Role="Child" EntitySet="Children" />
       <End Role="ChildUser" EntitySet="ChildUser" />
@@ -117,6 +118,14 @@
       <End Role="User" EntitySet="Users" />
       <End Role="School" EntitySet="Schools" />
     </AssociationSet>
+    <AssociationSet Name="FK_TestSubject_Test" Association="HstDB.Store.FK_TestSubject_Test">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="TestSubject" EntitySet="TestSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestSubject_Subject" Association="HstDB.Store.FK_TestSubject_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="TestSubject" EntitySet="TestSubject" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Children">
     <Key>
@@ -182,6 +191,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TestName" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Questions" Type="int" Nullable="false" />
+    <Property Name="TestDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="TestResults">
     <Key>
@@ -190,7 +200,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Correct" Type="int" Nullable="false" />
     <Property Name="NotAnswered" Type="int" Nullable="false" />
-    <Property Name="Incorrect" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Incorrect" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Schools">
     <Key>
@@ -287,6 +297,14 @@
     </Key>
     <Property Name="Tests_Id" Type="int" Nullable="false" />
     <Property Name="Users_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestSubject">
+    <Key>
+      <PropertyRef Name="Tests_Id" />
+      <PropertyRef Name="Subjects_Id" />
+    </Key>
+    <Property Name="Tests_Id" Type="int" Nullable="false" />
+    <Property Name="Subjects_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="ChildSchool">
     <End Role="Child" Type="HstDB.Store.Children" Multiplicity="*" />
@@ -573,6 +591,30 @@
       </Principal>
       <Dependent Role="TestUser">
         <PropertyRef Name="Users_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestSubject_Test">
+    <End Role="Test" Type="HstDB.Store.Tests" Multiplicity="1" />
+    <End Role="TestSubject" Type="HstDB.Store.TestSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestSubject">
+        <PropertyRef Name="Tests_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestSubject_Subject">
+    <End Role="TestSubject" Type="HstDB.Store.TestSubject" Multiplicity="*" />
+    <End Role="Subject" Type="HstDB.Store.Subjects" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestSubject">
+        <PropertyRef Name="Subjects_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

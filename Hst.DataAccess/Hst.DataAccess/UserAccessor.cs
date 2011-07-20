@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Linq;
 using Hst.Domain.Entities;
 
@@ -30,6 +31,23 @@ namespace Hst.DataAccess
                 else
                 {
                     db.Users.AddObject(u);
+                    foreach (var lesson in u.Lessons)
+                    {
+                        db.ObjectStateManager.ChangeObjectState(lesson, EntityState.Unchanged);
+                    }
+                    foreach (var activity in u.Activities)
+                    {
+                        db.ObjectStateManager.ChangeObjectState(activity, EntityState.Unchanged);
+                    }
+                    foreach (var child in u.Children)
+                    {
+                        db.ObjectStateManager.ChangeObjectState(child, EntityState.Unchanged);
+                    }
+                    foreach (var test in u.Tests)
+                    {
+                        db.ObjectStateManager.ChangeObjectState(test, EntityState.Unchanged);
+                    }
+                    db.ObjectStateManager.ChangeObjectState(u.School, EntityState.Unchanged);
                     db.SaveChanges();
                 }
             }
@@ -50,7 +68,7 @@ namespace Hst.DataAccess
                 {
                     user = result.First();
                     db.LoadProperty(user, "School");
-                    db.Users.Detach(user);
+                    //db.Users.Detach(user);
                 }
             }
 

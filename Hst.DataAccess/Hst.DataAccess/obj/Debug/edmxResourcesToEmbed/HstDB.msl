@@ -70,6 +70,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="TestName" ColumnName="TestName" />
           <ScalarProperty Name="Questions" ColumnName="Questions" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -178,6 +179,14 @@
       </EndProperty>
       <EndProperty Name="User">
         <ScalarProperty Name="Id" ColumnName="Users_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TestSubject" TypeName="HstDB.TestSubject" StoreEntitySet="TestSubject">
+      <EndProperty Name="Test">
+        <ScalarProperty Name="Id" ColumnName="Tests_Id" />
+      </EndProperty>
+      <EndProperty Name="Subject">
+        <ScalarProperty Name="Id" ColumnName="Subjects_Id" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

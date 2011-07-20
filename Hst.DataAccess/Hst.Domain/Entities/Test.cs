@@ -37,6 +37,12 @@ namespace Hst.Domain.Entities
             get;
             set;
         }
+    
+        public virtual System.DateTime TestDate
+        {
+            get;
+            set;
+        }
 
         #endregion
         #region Navigation Properties
@@ -104,6 +110,38 @@ namespace Hst.Domain.Entities
             }
         }
         private ICollection<User> _users;
+    
+        public virtual ICollection<Subject> Subjects
+        {
+            get
+            {
+                if (_subjects == null)
+                {
+                    var newCollection = new FixupCollection<Subject>();
+                    newCollection.CollectionChanged += FixupSubjects;
+                    _subjects = newCollection;
+                }
+                return _subjects;
+            }
+            set
+            {
+                if (!ReferenceEquals(_subjects, value))
+                {
+                    var previousValue = _subjects as FixupCollection<Subject>;
+                    if (previousValue != null)
+                    {
+                        previousValue.CollectionChanged -= FixupSubjects;
+                    }
+                    _subjects = value;
+                    var newValue = value as FixupCollection<Subject>;
+                    if (newValue != null)
+                    {
+                        newValue.CollectionChanged += FixupSubjects;
+                    }
+                }
+            }
+        }
+        private ICollection<Subject> _subjects;
 
         #endregion
         #region Association Fixup
@@ -149,6 +187,31 @@ namespace Hst.Domain.Entities
             if (e.OldItems != null)
             {
                 foreach (User item in e.OldItems)
+                {
+                    if (item.Tests.Contains(this))
+                    {
+                        item.Tests.Remove(this);
+                    }
+                }
+            }
+        }
+    
+        private void FixupSubjects(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            if (e.NewItems != null)
+            {
+                foreach (Subject item in e.NewItems)
+                {
+                    if (!item.Tests.Contains(this))
+                    {
+                        item.Tests.Add(this);
+                    }
+                }
+            }
+    
+            if (e.OldItems != null)
+            {
+                foreach (Subject item in e.OldItems)
                 {
                     if (item.Tests.Contains(this))
                     {

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="HstDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
-  <EntityContainer Name="HstDBContainer" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="HstDBContainer" annotation:LazyLoadingEnabled="false">
     <EntitySet Name="Children" EntityType="HstDB.Child" />
     <EntitySet Name="Users" EntityType="HstDB.User" />
     <AssociationSet Name="ChildUser" Association="HstDB.ChildUser">
@@ -62,6 +62,10 @@
       <End Role="User" EntitySet="Users" />
       <End Role="School" EntitySet="Schools" />
     </AssociationSet>
+    <AssociationSet Name="TestSubject" Association="HstDB.TestSubject">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="Subject" EntitySet="Subjects" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Child">
     <Key>
@@ -117,6 +121,7 @@
     <NavigationProperty Name="Lessons" Relationship="HstDB.LessonSubject" FromRole="Subject" ToRole="Lesson" />
     <NavigationProperty Name="Activities" Relationship="HstDB.ActivitySubject" FromRole="Subject" ToRole="Activity" />
     <Property Type="String" Name="Name" Nullable="false" />
+    <NavigationProperty Name="Tests" Relationship="HstDB.TestSubject" FromRole="Subject" ToRole="Test" />
   </EntityType>
   <Association Name="SubjectStateRequiredSubject">
     <End Type="HstDB.Subject" Role="Subject" Multiplicity="*" />
@@ -181,6 +186,8 @@
     <Property Type="Int32" Name="Questions" Nullable="false" />
     <NavigationProperty Name="TestResults" Relationship="HstDB.Test_TestResult" FromRole="Test" ToRole="TestResult" />
     <NavigationProperty Name="Users" Relationship="HstDB.TestUser" FromRole="Test" ToRole="User" />
+    <NavigationProperty Name="Subjects" Relationship="HstDB.TestSubject" FromRole="Test" ToRole="Subject" />
+    <Property Type="DateTime" Name="TestDate" Nullable="false" />
   </EntityType>
   <EntityType Name="TestResult">
     <Key>
@@ -189,7 +196,7 @@
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="Correct" Nullable="false" />
     <Property Type="Int32" Name="NotAnswered" Nullable="false" />
-    <Property Type="String" Name="Incorrect" Nullable="false" />
+    <Property Type="Int32" Name="Incorrect" Nullable="false" />
     <NavigationProperty Name="Tests" Relationship="HstDB.Test_TestResult" FromRole="TestResult" ToRole="Test" />
     <NavigationProperty Name="Children" Relationship="HstDB.ChildTestResult" FromRole="TestResult" ToRole="Child" />
   </EntityType>
@@ -238,5 +245,9 @@
         <PropertyRef Name="SchoolId" />
       </Dependent>
     </ReferentialConstraint>
+  </Association>
+  <Association Name="TestSubject">
+    <End Type="HstDB.Test" Role="Test" Multiplicity="*" />
+    <End Type="HstDB.Subject" Role="Subject" Multiplicity="*" />
   </Association>
 </Schema>

@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 07/08/2011 17:05:25
--- Generated from EDMX file: C:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.DataAccess\HstDB.edmx
+-- Date Created: 07/19/2011 23:11:35
+-- Generated from EDMX file: c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.DataAccess\HstDB.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -89,6 +89,12 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_UserSchool]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Users] DROP CONSTRAINT [FK_UserSchool];
 GO
+IF OBJECT_ID(N'[dbo].[FK_TestSubject_Test]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TestSubject] DROP CONSTRAINT [FK_TestSubject_Test];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TestSubject_Subject]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TestSubject] DROP CONSTRAINT [FK_TestSubject_Subject];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -153,6 +159,9 @@ IF OBJECT_ID(N'[dbo].[ChildTestResult]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[TestUser]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TestUser];
+GO
+IF OBJECT_ID(N'[dbo].[TestSubject]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TestSubject];
 GO
 
 -- --------------------------------------------------
@@ -220,7 +229,8 @@ GO
 CREATE TABLE [dbo].[Tests] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [TestName] nvarchar(max)  NOT NULL,
-    [Questions] int  NOT NULL
+    [Questions] int  NOT NULL,
+    [TestDate] datetime  NOT NULL
 );
 GO
 
@@ -229,7 +239,7 @@ CREATE TABLE [dbo].[TestResults] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Correct] int  NOT NULL,
     [NotAnswered] int  NOT NULL,
-    [Incorrect] nvarchar(max)  NOT NULL
+    [Incorrect] int  NOT NULL
 );
 GO
 
@@ -315,6 +325,13 @@ GO
 CREATE TABLE [dbo].[TestUser] (
     [Tests_Id] int  NOT NULL,
     [Users_Id] int  NOT NULL
+);
+GO
+
+-- Creating table 'TestSubject'
+CREATE TABLE [dbo].[TestSubject] (
+    [Tests_Id] int  NOT NULL,
+    [Subjects_Id] int  NOT NULL
 );
 GO
 
@@ -440,6 +457,12 @@ GO
 ALTER TABLE [dbo].[TestUser]
 ADD CONSTRAINT [PK_TestUser]
     PRIMARY KEY NONCLUSTERED ([Tests_Id], [Users_Id] ASC);
+GO
+
+-- Creating primary key on [Tests_Id], [Subjects_Id] in table 'TestSubject'
+ALTER TABLE [dbo].[TestSubject]
+ADD CONSTRAINT [PK_TestSubject]
+    PRIMARY KEY NONCLUSTERED ([Tests_Id], [Subjects_Id] ASC);
 GO
 
 -- --------------------------------------------------
@@ -725,6 +748,29 @@ ADD CONSTRAINT [FK_UserSchool]
 CREATE INDEX [IX_FK_UserSchool]
 ON [dbo].[Users]
     ([SchoolId]);
+GO
+
+-- Creating foreign key on [Tests_Id] in table 'TestSubject'
+ALTER TABLE [dbo].[TestSubject]
+ADD CONSTRAINT [FK_TestSubject_Test]
+    FOREIGN KEY ([Tests_Id])
+    REFERENCES [dbo].[Tests]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [Subjects_Id] in table 'TestSubject'
+ALTER TABLE [dbo].[TestSubject]
+ADD CONSTRAINT [FK_TestSubject_Subject]
+    FOREIGN KEY ([Subjects_Id])
+    REFERENCES [dbo].[Subjects]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TestSubject_Subject'
+CREATE INDEX [IX_FK_TestSubject_Subject]
+ON [dbo].[TestSubject]
+    ([Subjects_Id]);
 GO
 
 -- --------------------------------------------------

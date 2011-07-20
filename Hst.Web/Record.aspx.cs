@@ -2,202 +2,78 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.ServiceModel;
 using System.Web;
 using System.Web.Security;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Runtime.Serialization.Json;
 using Hst.DataAccess;
 using Hst.Domain.Entities;
 
-public partial class Record : BasePage
+public partial class Record : System.Web.UI.Page
 {
-    protected override void OnInit(EventArgs e)
-    {
-        base.OnInit(e);
-        var cs = (ChildSelector)LoadControl("~/ChildSelector.ascx");
-        cs.ID = "childselector";
-        pnlStudents.Controls.Add(cs);
-
-        var ss = (SubjectSelector)LoadControl("~/SubjectSelector.ascx");
-        ss.ID = "subjectSelectionTool";
-        pnlSubjects.Controls.Add(ss);
-
-    }
-
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
+
+    }
+
+    [WebMethod]
+    [OperationContract]
+    public static List<object> GetStudents()
+    {
+        var mu = Membership.GetUser();
+        var students = new List<object>();
+
+        if (mu != null)
         {
-            var mu = Membership.GetUser();
+            var ca = new ChildAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+            var ua = new UserAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+            var user = ua.GetUserByLogin(mu.UserName);
 
-            if (mu != null)
-            {
-                var ca = new ChildAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
-                var ua = new UserAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
-                var sa = new SubjectAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
-                var user = ua.GetUserByLogin(mu.UserName);
-                //var cs = (ChildSelector)LoadControl("~/ChildSelector.ascx");
+            var children = ca.GetChildrenByUser(user);
 
-                //cs.Children = ca.GetChildrenByUser(user);
-
-                var cs = pnlStudents.FindControl("childselector") as ChildSelector;
-                if (cs != null)
-                {
-                    cs.Children = ca.GetChildrenByUser(user);
-                }
-
-                var ss = pnlSubjects.FindControl("subjectSelectionTool") as SubjectSelector;
-                if (ss != null)
-                {
-                    ss.Subjects = sa.GetAllSubjects();
-                }
-
-            }
+            var student = from child in children
+                          select new
+                                     {
+                                         NameLast = child.NameLast,
+                                         NameFirst = child.NameFirst,
+                                         Id = child.Id
+                                     };
+            students.Add(student);
         }
 
-        if (txtRecordDate.Text == string.Empty)
-        {
-            txtRecordDate.Text = DateTime.Today.ToShortDateString();
-        }
-
-        if (hidRecordType.Value == "Activity")
-        {
-            var ra = (RecordActivity) LoadControl("~/RecordActivity.ascx");
-            ra.ID = "recordactivity";
-            pnlRecordDetails.Controls.Add(ra);
-        }
-
+        return students;
     }
 
-    protected void btnStudentsSelected_OnClick(object sender, EventArgs e)
+    [WebMethod]
+    [OperationContract]
+    public static IEnumerable<object> GetSubjects()
     {
-        BuildSummary();
-        hidAccordionIndex.Value = (1).ToString();
+        var sa = new SubjectAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var subjects = sa.GetAllSubjects();
+
+        var subject = from sub in subjects
+                      select new
+                                 {
+                                     Name = sub.Name,
+                                     Id = sub.Id
+                                 };
+
+        return subject;
 
     }
 
-    protected void BuildSummary()
-    {
-        BuildSelectedChildrenSummary();
-        BuildSelectedRecordTypeSummary();
-        BuildSelectedSubjectsSummary();
-        BuildSelectedDateSummary();
-    }
-
-    protected void BuildSelectedDateSummary()
-    {
-        if (txtRecordDate.Text != string.Empty)
-        {
-            var rt = (SelectedDate)LoadControl("~/SelectedDate.ascx");
-            rt.DateSelected = txtRecordDate.Text;
-            pnlSelectedDate.Controls.Add(rt);
-        }
-    }
-
-    protected void BuildSelectedSubjectsSummary()
-    {
-        var sss = pnlSelectedSubjects.FindControl("subjectSelectionTool");
-        var subselect = sss as SubjectSelector;
-
-        var ss = (SelectedSubjects) LoadControl("~/SelectedSubjects.ascx");
-        ss.ID = "selectedSubjectsControl";
-
-        if (subselect != null)
-        {
-            foreach (var subjectControl in subselect.SubjectControls)
-            {
-                if (subjectControl.IsChecked)
-                {
-                    if (ss.Subjects == null)
-                    {
-                        ss.Subjects = new List<Subject>();
-                    }
-
-                    ss.Subjects.Add(subjectControl.Subject);
-                }
-            }
-        }
-
-        pnlSelectedSubjects.Controls.Add(ss);
-    }
-
-    protected void BuildSelectedRecordTypeSummary()
-    {
-        if (hidRecordType.Value != string.Empty)
-        {
-            var rt = (SelectedRecordType)LoadControl("~/SelectedRecordType.ascx");
-            rt.RecordType = hidRecordType.Value;
-            pnlSelectedRecordType.Controls.Add(rt);
-        }
-    }
-
-    protected void BuildSelectedChildrenSummary()
-    {
-        var ics = pnlStudents.FindControl("childselector");
-        var childselector = ics as ChildSelector;
-
-        var ss = (SelectedStudents)LoadControl("~/SelectedStudents.ascx");
-        ss.ID = "selectedStudentsControl";
-
-
-        if (childselector != null)
-        {
-            foreach (var studentControl in childselector.StudentControls)
-            {
-                if (studentControl.IsChecked)
-                {
-                    if (ss.Children == null)
-                    {
-                        ss.Children = new List<Child>();
-                    }
-                    ss.Children.Add(studentControl.Child);
-                }
-            }
-        }
-
-        pnlSelectedStudents.Controls.Add(ss);
-
-    }
-
-    protected void btnRecordActivity_Click(object sender, EventArgs e)
-    {
-        hidRecordType.Value = "Activity";
-        BuildSummary();
-        hidAccordionIndex.Value = (2).ToString();
-    }
-
-    protected void btnRecordLesson_Click(object sender, EventArgs e)
-    {
-        hidRecordType.Value = "Lesson";
-        BuildSummary();
-        hidAccordionIndex.Value = (2).ToString();
-    }
-
-    protected void btnRecordTest_Click(object sender, EventArgs e)
-    {
-        hidRecordType.Value = "Test";
-        BuildSummary();
-        hidAccordionIndex.Value = (2).ToString();
-    }
-
-    protected void btnSubjectsSelected_OnClick(object sender, EventArgs e)
-    {
-        BuildSummary();
-        hidAccordionIndex.Value = (3).ToString(); 
-    }
-
-    protected void btnDateSelected_OnClick(object sender, EventArgs e)
-    {
-        BuildSummary();
-        hidAccordionIndex.Value = (4).ToString();
-    }
-
-    protected void btnSaveDetails_OnClick(object sender, EventArgs e)
+    [WebMethod]
+    [OperationContract]
+    public static void SaveActivity(List<int> studentids, List<int> subjectids, string date, string activityName, string activityDescription, string timeSpent)
     {
         // Verify the currentuser is a teacher for this school
         var ua = new UserAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
         var recordaccessor = new RecordAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
-        var studentaccessor = new StudentAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var subjectaccessor = new SubjectAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var childaccessor = new ChildAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
 
         var mu = Membership.GetUser();
 
@@ -208,91 +84,160 @@ public partial class Record : BasePage
             if (user.IsTeacher)
             {
                 // Get the students involved
-                var students = GetSelectedStudents();
+                var students = childaccessor.GetChildrenByIds(studentids);
 
-                // Get the activity type
-                var activitytype = hidRecordType.Value;
 
                 // Get the subjects involved
-                var subjects = GetSelectedSubjects();
+                var subjects = subjectaccessor.GetSubjectsByIds(subjectids);
 
                 // Get the date
-                var recordDate = DateTime.Parse(txtRecordDate.Text);
+                var recordDate = DateTime.Parse(date);
 
                 // Get the details
-                switch (activitytype)
+                var activity = new Activity();
+                activity.ActivityDate = recordDate;
+                activity.ActivityName = activityName;
+                activity.Notes = activityDescription;
+                activity.TimeSpent = timeSpent;
+                activity.Users.Add(user);
+
+                foreach (var subject in subjects)
                 {
-                    case "Activity":
-                        var ad = pnlStudents.FindControl("recordactivity");
-                        var ra = ad as RecordActivity;
-
-                        var activity = new Activity();
-                        activity.ActivityDate = recordDate;
-                        activity.ActivityName = ra.ActivityName;
-                        activity.Notes = ra.ActivityNote;
-                        activity.TimeSpent = ra.TimeSpent;
-                        activity.Users.Add(user);
-
-                        foreach (var subject in subjects)
-                        {
-                            activity.Subjects.Add(subject);
-                        }
-                        
-                        foreach (var student in students)
-                        {
-                            activity.Children.Add(student);
-                        }
-
-                        recordaccessor.PersistActivity(activity);
-                        Response.Redirect("~/Record.aspx");
-                        break;
-                    default:
-                        break;
+                    activity.Subjects.Add(subject);
                 }
 
-
-
-            }
-        }
-
-
-        
-    }
-
-    private List<Child> GetSelectedStudents()
-    {
-        var ics = pnlStudents.FindControl("childselector");
-        var childselector = ics as ChildSelector;
-        var result = new List<Child>();
-
-        if (childselector != null)
-        {
-            foreach (var studentControl in childselector.StudentControls)
-            {
-                result.Add(studentControl.Child);
-            }
-        }
-
-        return result;
-    }
-
-    private List<Subject> GetSelectedSubjects()
-    {
-        var sss = pnlSelectedSubjects.FindControl("subjectSelectionTool");
-        var subselect = sss as SubjectSelector;
-        var result = new List<Subject>();
-
-        if (subselect != null)
-        {
-            foreach (var subjectControl in subselect.SubjectControls)
-            {
-                if (subjectControl.IsChecked)
+                foreach (var student in students)
                 {
-                    result.Add(subjectControl.Subject);
+                    activity.Children.Add(student);
+                }
+
+                recordaccessor.PersistActivity(activity);
+            }
+        }
+    }
+
+    [WebMethod]
+    [OperationContract]
+    public static void SaveLesson(List<int> studentids, List<int> subjectids, string date, string lessonTitle, string lessonDescription, string timeSpent)
+    {
+        int time = 0;
+        bool timeValid = Int32.TryParse(timeSpent, out time);
+
+        if (!timeValid)
+        {
+            throw new ArgumentException("timeSpent must be a valid number of minutes");
+        }
+
+        // Verify the currentuser is a teacher for this school
+        var ua = new UserAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var recordaccessor = new RecordAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var subjectaccessor = new SubjectAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var childaccessor = new ChildAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+
+        var mu = Membership.GetUser();
+
+        if (mu != null)
+        {
+            var user = ua.GetUserByLogin(mu.UserName);
+
+            if (user.IsTeacher)
+            {
+                // Get the students involved
+                var students = childaccessor.GetChildrenByIds(studentids);
+
+                // Get the subjects involved
+                var subjects = subjectaccessor.GetSubjectsByIds(subjectids);
+
+                // Get the date
+                var recordDate = DateTime.Parse(date);
+
+                // Get the details
+                var lesson = new Lesson();
+                lesson.LessonDate = recordDate;
+                lesson.LessonTitle = lessonTitle;
+                lesson.Notes = lessonDescription;
+                lesson.TimeSpent = new TimeSpan(0, time, 0);
+                lesson.Users.Add(user);
+
+                foreach (var subject in subjects)
+                {
+                    lesson.Subjects.Add(subject);
+                }
+
+                foreach (var student in students)
+                {
+                    lesson.Children.Add(student);
+                }
+
+                recordaccessor.PersistLesson(lesson);
+            }
+        }
+    }
+
+    [WebMethod]
+    [OperationContract]
+    public static void SaveTest(List<TestScoreDTO> scores, List<int> subjectids, string date, string testName, int totalQuestions)
+    {
+        // Verify the currentuser is a teacher for this school
+        var ua = new UserAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var recordaccessor = new RecordAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var subjectaccessor = new SubjectAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+        var childaccessor = new ChildAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+
+        var mu = Membership.GetUser();
+
+        if (mu != null)
+        {
+            var user = ua.GetUserByLogin(mu.UserName);
+
+            if (user.IsTeacher)
+            {
+                var studentids = scores.Select(testScoreDto => testScoreDto.StudentId).ToList();
+
+                // Get the students involved
+                var students = childaccessor.GetChildrenByIds(studentids);
+
+                // Get the subjects involved
+                var subjects = subjectaccessor.GetSubjectsByIds(subjectids);
+
+                // Get the date
+                var recordDate = DateTime.Parse(date);
+
+                // Build the test
+                var test = new Test();
+                test.TestName = testName;
+                test.Questions = totalQuestions;
+                test.TestDate = recordDate;
+
+                foreach (var subject in subjects)
+                {
+                    test.Subjects.Add(subject);
+                }
+                test.Users.Add(user);
+
+                recordaccessor.PersistTest(test);
+
+                foreach (var score in scores)
+                {
+                    var sid = score.StudentId;
+                    var tr = new TestResult();
+                    tr.Tests.Add(test);
+                    tr.Children.Add( students.Where(s => s.Id == sid).FirstOrDefault());
+                    tr.Correct = score.Correct;
+                    tr.NotAnswered = score.NotAnswered;
+                    tr.Incorrect = score.Incorrect;
+
+                    recordaccessor.PersistTestScore(tr);
                 }
             }
         }
-
-        return result;
     }
+}
+
+public class TestScoreDTO
+{
+    public int StudentId { get; set; }
+    public int Correct { get; set; }
+    public int NotAnswered { get; set; }
+    public int Incorrect { get; set; }
 }

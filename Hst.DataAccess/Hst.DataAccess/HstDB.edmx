@@ -26,6 +26,7 @@
     <EntitySet Name="Test_TestResult" EntityType="HstDB.Store.Test_TestResult" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ChildTestResult" EntityType="HstDB.Store.ChildTestResult" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TestUser" EntityType="HstDB.Store.TestUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TestSubject" EntityType="HstDB.Store.TestSubject" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_ChildUser_Child" Association="HstDB.Store.FK_ChildUser_Child">
       <End Role="Child" EntitySet="Children" />
       <End Role="ChildUser" EntitySet="ChildUser" />
@@ -122,6 +123,14 @@
       <End Role="User" EntitySet="Users" />
       <End Role="School" EntitySet="Schools" />
     </AssociationSet>
+    <AssociationSet Name="FK_TestSubject_Test" Association="HstDB.Store.FK_TestSubject_Test">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="TestSubject" EntitySet="TestSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestSubject_Subject" Association="HstDB.Store.FK_TestSubject_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="TestSubject" EntitySet="TestSubject" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Children">
     <Key>
@@ -187,6 +196,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TestName" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Questions" Type="int" Nullable="false" />
+    <Property Name="TestDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="TestResults">
     <Key>
@@ -195,7 +205,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Correct" Type="int" Nullable="false" />
     <Property Name="NotAnswered" Type="int" Nullable="false" />
-    <Property Name="Incorrect" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Incorrect" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Schools">
     <Key>
@@ -292,6 +302,14 @@
     </Key>
     <Property Name="Tests_Id" Type="int" Nullable="false" />
     <Property Name="Users_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TestSubject">
+    <Key>
+      <PropertyRef Name="Tests_Id" />
+      <PropertyRef Name="Subjects_Id" />
+    </Key>
+    <Property Name="Tests_Id" Type="int" Nullable="false" />
+    <Property Name="Subjects_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="ChildSchool">
     <End Role="Child" Type="HstDB.Store.Children" Multiplicity="*" />
@@ -581,11 +599,35 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TestSubject_Test">
+    <End Role="Test" Type="HstDB.Store.Tests" Multiplicity="1" />
+    <End Role="TestSubject" Type="HstDB.Store.TestSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestSubject">
+        <PropertyRef Name="Tests_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestSubject_Subject">
+    <End Role="TestSubject" Type="HstDB.Store.TestSubject" Multiplicity="*" />
+    <End Role="Subject" Type="HstDB.Store.Subjects" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TestSubject">
+        <PropertyRef Name="Subjects_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="HstDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
-        <EntityContainer Name="HstDBContainer" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="HstDBContainer" annotation:LazyLoadingEnabled="false">
           <EntitySet Name="Children" EntityType="HstDB.Child" />
           <EntitySet Name="Users" EntityType="HstDB.User" />
           <AssociationSet Name="ChildUser" Association="HstDB.ChildUser">
@@ -647,6 +689,10 @@
             <End Role="User" EntitySet="Users" />
             <End Role="School" EntitySet="Schools" />
           </AssociationSet>
+          <AssociationSet Name="TestSubject" Association="HstDB.TestSubject">
+            <End Role="Test" EntitySet="Tests" />
+            <End Role="Subject" EntitySet="Subjects" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Child">
           <Key>
@@ -702,6 +748,7 @@
           <NavigationProperty Name="Lessons" Relationship="HstDB.LessonSubject" FromRole="Subject" ToRole="Lesson" />
           <NavigationProperty Name="Activities" Relationship="HstDB.ActivitySubject" FromRole="Subject" ToRole="Activity" />
           <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Tests" Relationship="HstDB.TestSubject" FromRole="Subject" ToRole="Test" />
         </EntityType>
         <Association Name="SubjectStateRequiredSubject">
           <End Type="HstDB.Subject" Role="Subject" Multiplicity="*" />
@@ -766,6 +813,8 @@
           <Property Type="Int32" Name="Questions" Nullable="false" />
           <NavigationProperty Name="TestResults" Relationship="HstDB.Test_TestResult" FromRole="Test" ToRole="TestResult" />
           <NavigationProperty Name="Users" Relationship="HstDB.TestUser" FromRole="Test" ToRole="User" />
+          <NavigationProperty Name="Subjects" Relationship="HstDB.TestSubject" FromRole="Test" ToRole="Subject" />
+          <Property Type="DateTime" Name="TestDate" Nullable="false" />
         </EntityType>
         <EntityType Name="TestResult">
           <Key>
@@ -774,7 +823,7 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="Int32" Name="Correct" Nullable="false" />
           <Property Type="Int32" Name="NotAnswered" Nullable="false" />
-          <Property Type="String" Name="Incorrect" Nullable="false" />
+          <Property Type="Int32" Name="Incorrect" Nullable="false" />
           <NavigationProperty Name="Tests" Relationship="HstDB.Test_TestResult" FromRole="TestResult" ToRole="Test" />
           <NavigationProperty Name="Children" Relationship="HstDB.ChildTestResult" FromRole="TestResult" ToRole="Child" />
         </EntityType>
@@ -823,6 +872,10 @@
               <PropertyRef Name="SchoolId" />
             </Dependent>
           </ReferentialConstraint>
+        </Association>
+        <Association Name="TestSubject">
+          <End Type="HstDB.Test" Role="Test" Multiplicity="*" />
+          <End Type="HstDB.Subject" Role="Subject" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -899,6 +952,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="TestName" ColumnName="TestName" />
           <ScalarProperty Name="Questions" ColumnName="Questions" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -1009,6 +1063,14 @@
         <ScalarProperty Name="Id" ColumnName="Users_Id" />
       </EndProperty>
     </AssociationSetMapping>
+    <AssociationSetMapping Name="TestSubject" TypeName="HstDB.TestSubject" StoreEntitySet="TestSubject">
+      <EndProperty Name="Test">
+        <ScalarProperty Name="Id" ColumnName="Tests_Id" />
+      </EndProperty>
+      <EndProperty Name="Subject">
+        <ScalarProperty Name="Id" ColumnName="Subjects_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
@@ -1043,10 +1105,8 @@
         </AssociationConnector>
         <EntityTypeShape EntityType="HstDB.Lesson" Width="1.5" PointX="8.25" PointY="4.75" Height="2.5571907552083317" />
         <AssociationConnector Association="HstDB.ChildLesson">
-          <ConnectorPoint PointX="1.5" PointY="4.75" />
-          <ConnectorPoint PointX="1.5" PointY="4.125" />
-          <ConnectorPoint PointX="1.7916666666666667" PointY="4.1249999999999991" />
-          <ConnectorPoint PointX="1.9583333333333333" PointY="4.125" />
+          <ConnectorPoint PointX="1.4804675" PointY="4.75" />
+          <ConnectorPoint PointX="1.4804675" PointY="4.125" />
           <ConnectorPoint PointX="2.5416666666666665" PointY="4.1249999999999991" />
           <ConnectorPoint PointX="2.7083333333333335" PointY="4.125" />
           <ConnectorPoint PointX="3.3789176945368449" PointY="4.1249999999999991" />
@@ -1056,10 +1116,10 @@
           <ConnectorPoint PointX="6.666666666666667" PointY="4.1249999999999991" />
           <ConnectorPoint PointX="6.833333333333333" PointY="4.125" />
           <ConnectorPoint PointX="7.875" PointY="4.125" />
-          <ConnectorPoint PointX="7.875" PointY="6.1067223776041661" />
-          <ConnectorPoint PointX="7.947916666666667" PointY="6.1067223776041653" />
-          <ConnectorPoint PointX="8.1145833333333339" PointY="6.1067223776041661" />
-          <ConnectorPoint PointX="8.25" PointY="6.1067223776041661" />
+          <ConnectorPoint PointX="7.875" PointY="6.0285953776041659" />
+          <ConnectorPoint PointX="7.947916666666667" PointY="6.028595377604165" />
+          <ConnectorPoint PointX="8.1145833333333339" PointY="6.0285953776041659" />
+          <ConnectorPoint PointX="8.25" PointY="6.0285953776041659" />
         </AssociationConnector>
         <AssociationConnector Association="HstDB.UserLesson">
           <ConnectorPoint PointX="4.5" PointY="4.84375" />
@@ -1072,44 +1132,45 @@
           <ConnectorPoint PointX="8.25" PointY="4.84375" />
         </AssociationConnector>
         <AssociationConnector Association="HstDB.LessonSubject">
-          <ConnectorPoint PointX="9.75" PointY="4.9276432291666659" />
-          <ConnectorPoint PointX="10.5" PointY="4.9276432291666659" />
+          <ConnectorPoint PointX="9.75" PointY="5.0237939453125" />
+          <ConnectorPoint PointX="10.5" PointY="5.0237939453125" />
         </AssociationConnector>
         <EntityTypeShape EntityType="HstDB.Activity" Width="1.5" PointX="5.25" PointY="0.75" Height="2.5571907552083317" />
         <AssociationConnector Association="HstDB.ChildActivity">
           <ConnectorPoint PointX="2.25" PointY="4.75" />
           <ConnectorPoint PointX="2.625" PointY="4.375" />
-          <ConnectorPoint PointX="2.625" PointY="1.9623382288411453" />
-          <ConnectorPoint PointX="4.916666666666667" PointY="1.9623382288411446" />
-          <ConnectorPoint PointX="5.083333333333333" PointY="1.9623382288411453" />
-          <ConnectorPoint PointX="5.25" PointY="1.9623382288411453" />
+          <ConnectorPoint PointX="2.625" PointY="2.6819382549845372" />
+          <ConnectorPoint PointX="3.3789176945368449" PointY="2.6819382549845368" />
+          <ConnectorPoint PointX="3.5455843612035118" PointY="2.6819382549845372" />
+          <ConnectorPoint PointX="3.903673722407023" PointY="2.6819382549845368" />
+          <ConnectorPoint PointX="4.07034038907369" PointY="2.6819382549845372" />
+          <ConnectorPoint PointX="5.25" PointY="2.6819382549845372" />
         </AssociationConnector>
         <AssociationConnector Association="HstDB.UserActivity">
           <ConnectorPoint PointX="3.9870070557403565" PointY="4.375" />
-          <ConnectorPoint PointX="3.9870070557403565" PointY="2.8587845120442696" />
-          <ConnectorPoint PointX="4.916666666666667" PointY="2.8587845120442692" />
-          <ConnectorPoint PointX="5.083333333333333" PointY="2.8587845120442696" />
-          <ConnectorPoint PointX="5.25" PointY="2.8587845120442696" />
+          <ConnectorPoint PointX="3.9870070557403565" PointY="2.4259113972574862" />
+          <ConnectorPoint PointX="5.25" PointY="2.4259113972574862" />
         </AssociationConnector>
         <AssociationConnector Association="HstDB.ActivitySubject">
           <ConnectorPoint PointX="6.75" PointY="0.90625" />
           <ConnectorPoint PointX="11.25" PointY="0.90625" />
           <ConnectorPoint PointX="11.25" PointY="3.125" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="HstDB.Test" Width="1.5" PointX="0.75" PointY="1" Height="1.9802864583333317" />
+        <EntityTypeShape EntityType="HstDB.Test" Width="1.5" PointX="0.75" PointY="1" Height="2.364889322916667" />
         <EntityTypeShape EntityType="HstDB.TestResult" Width="1.5" PointX="6" PointY="5" Height="2.1725878906249996" />
         <AssociationConnector Association="HstDB.Test_TestResult">
-          <ConnectorPoint PointX="2.25" PointY="1.514298188802083" />
-          <ConnectorPoint PointX="5" PointY="1.514298188802083" />
-          <ConnectorPoint PointX="5" PointY="3.5571907552083317" />
-          <ConnectorPoint PointX="6.75" PointY="3.5571907552083317" />
+          <ConnectorPoint PointX="2.2499999999999996" PointY="3.364889322916667" />
+          <ConnectorPoint PointX="2.625" PointY="3.7398893229166674" />
+          <ConnectorPoint PointX="3.3789176945368449" PointY="3.739889322916667" />
+          <ConnectorPoint PointX="3.5455843612035118" PointY="3.7398893229166674" />
+          <ConnectorPoint PointX="3.903673722407023" PointY="3.739889322916667" />
+          <ConnectorPoint PointX="4.07034038907369" PointY="3.7398893229166674" />
+          <ConnectorPoint PointX="6.75" PointY="3.7398893229166674" />
           <ConnectorPoint PointX="6.75" PointY="5" />
         </AssociationConnector>
         <AssociationConnector Association="HstDB.ChildTestResult">
-          <ConnectorPoint PointX="1.0937480000000002" PointY="4.75" />
-          <ConnectorPoint PointX="1.0937480000000002" PointY="4.109375" />
-          <ConnectorPoint PointX="1.7916666666666667" PointY="4.1093749999999991" />
-          <ConnectorPoint PointX="1.9583333333333333" PointY="4.109375" />
+          <ConnectorPoint PointX="1.8652337500000003" PointY="4.75" />
+          <ConnectorPoint PointX="1.8652337500000003" PointY="4.109375" />
           <ConnectorPoint PointX="2.5416666666666665" PointY="4.1093749999999991" />
           <ConnectorPoint PointX="2.7083333333333335" PointY="4.109375" />
           <ConnectorPoint PointX="3.3789176945368449" PointY="4.1093749999999991" />
@@ -1121,25 +1182,25 @@
           <ConnectorPoint PointX="6" PointY="6.0862939453125" />
         </AssociationConnector>
         <AssociationConnector Association="HstDB.TestUser">
-          <ConnectorPoint PointX="2.25" PointY="2.4105613704427076" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="2.4105613704427071" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="2.4105613704427076" />
-          <ConnectorPoint PointX="3.4622510278701784" PointY="2.4105613704427076" />
+          <ConnectorPoint PointX="2.25" PointY="1.7129556986287431" />
+          <ConnectorPoint PointX="3.4622510278701784" PointY="1.7129556986287431" />
           <ConnectorPoint PointX="3.4622510278701784" PointY="4.375" />
         </AssociationConnector>
         <EntityTypeShape EntityType="HstDB.School" Width="1.5" PointX="7.875" PointY="1.125" Height="1.787985026041667" />
         <AssociationConnector Association="HstDB.ChildSchool">
-          <ConnectorPoint PointX="1.875" PointY="4.75" />
-          <ConnectorPoint PointX="1.875" PointY="3.8071907552083317" />
-          <ConnectorPoint PointX="2.5416666666666665" PointY="3.8071907552083313" />
-          <ConnectorPoint PointX="2.7083333333333335" PointY="3.8071907552083317" />
-          <ConnectorPoint PointX="3.3789176945368449" PointY="3.8071907552083313" />
-          <ConnectorPoint PointX="3.5455843612035118" PointY="3.8071907552083317" />
-          <ConnectorPoint PointX="3.903673722407023" PointY="3.8071907552083313" />
-          <ConnectorPoint PointX="4.07034038907369" PointY="3.8071907552083317" />
-          <ConnectorPoint PointX="6.666666666666667" PointY="3.8071907552083313" />
-          <ConnectorPoint PointX="6.833333333333333" PointY="3.8071907552083317" />
-          <ConnectorPoint PointX="7.5" PointY="3.8071907552083317" />
+          <ConnectorPoint PointX="1.0161128125" PointY="4.75" />
+          <ConnectorPoint PointX="1.0161128125" PointY="3.5571907552083317" />
+          <ConnectorPoint PointX="1.1649568229166667" PointY="3.5571907552083313" />
+          <ConnectorPoint PointX="1.3316234895833332" PointY="3.5571907552083317" />
+          <ConnectorPoint PointX="2.3589680989583308" PointY="3.5571907552083313" />
+          <ConnectorPoint PointX="2.5256347656249978" PointY="3.5571907552083317" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="3.5571907552083313" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="3.5571907552083317" />
+          <ConnectorPoint PointX="3.3789176945368449" PointY="3.5571907552083313" />
+          <ConnectorPoint PointX="3.5455843612035118" PointY="3.5571907552083317" />
+          <ConnectorPoint PointX="3.903673722407023" PointY="3.5571907552083313" />
+          <ConnectorPoint PointX="4.07034038907369" PointY="3.5571907552083317" />
+          <ConnectorPoint PointX="7.5" PointY="3.5571907552083317" />
           <ConnectorPoint PointX="7.5" PointY="2.1151432291666667" />
           <ConnectorPoint PointX="7.875" PointY="2.1151432291666667" />
         </AssociationConnector>
@@ -1147,6 +1208,23 @@
           <ConnectorPoint PointX="4.5" PointY="7.6316943359374987" />
           <ConnectorPoint PointX="8.03125" PointY="7.6316943359374987" />
           <ConnectorPoint PointX="8.03125" PointY="3.1052864583333331" />
+        </AssociationConnector>
+        <AssociationConnector Association="HstDB.TestSubject">
+          <ConnectorPoint PointX="1.24829015625" PointY="3.364889322916667" />
+          <ConnectorPoint PointX="1.24829015625" PointY="4.4602278395432693" />
+          <ConnectorPoint PointX="1.3971341666666668" PointY="4.4602278395432684" />
+          <ConnectorPoint PointX="1.5638008333333333" PointY="4.4602278395432693" />
+          <ConnectorPoint PointX="1.781900416666667" PointY="4.4602278395432684" />
+          <ConnectorPoint PointX="1.9485670833333335" PointY="4.4602278395432693" />
+          <ConnectorPoint PointX="2.4564388271233972" PointY="4.4602278395432684" />
+          <ConnectorPoint PointX="2.6231054937900642" PointY="4.4602278395432693" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="4.4602278395432684" />
+          <ConnectorPoint PointX="5.708333333333333" PointY="4.4602278395432693" />
+          <ConnectorPoint PointX="6.666666666666667" PointY="4.4602278395432684" />
+          <ConnectorPoint PointX="6.833333333333333" PointY="4.4602278395432693" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="4.4602278395432684" />
+          <ConnectorPoint PointX="8.1145833333333339" PointY="4.4602278395432693" />
+          <ConnectorPoint PointX="10.5" PointY="4.4602278395432693" />
         </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>

@@ -38,7 +38,7 @@ namespace Hst.Domain.Entities
             set;
         }
     
-        public virtual string Incorrect
+        public virtual int Incorrect
         {
             get;
             set;
