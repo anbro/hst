@@ -25,18 +25,21 @@ namespace Hst.DataAccess
             : base(ConnectionString, ContainerName)
         {
             this.ContextOptions.LazyLoadingEnabled = false;
+            this.ContextOptions.ProxyCreationEnabled = false;
         }
     
         public HstDBContainer(string connectionString)
             : base(connectionString, ContainerName)
         {
             this.ContextOptions.LazyLoadingEnabled = false;
+            this.ContextOptions.ProxyCreationEnabled = false;
         }
     
         public HstDBContainer(EntityConnection connection)
             : base(connection, ContainerName)
         {
             this.ContextOptions.LazyLoadingEnabled = false;
+            this.ContextOptions.ProxyCreationEnabled = false;
         }
     
         #endregion

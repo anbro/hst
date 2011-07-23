@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Objects;
 using System.Linq;
 using System.Text;
 using Hst.Domain.Entities;
@@ -71,24 +72,32 @@ namespace Hst.DataAccess
                 else
                 {
                     db.Tests.AddObject(test);
-
+                    db.ObjectStateManager.ChangeObjectState(test, EntityState.Added);
                     foreach (var result in test.TestResults)
                     {
+                        //db.TestResults.Detach(result);
                         db.ObjectStateManager.ChangeObjectState(result, EntityState.Unchanged);
+                        
                     }
 
                     foreach (var subject in test.Subjects)
                     {
+                        //db.Subjects.Detach(subject);
                         db.ObjectStateManager.ChangeObjectState(subject, EntityState.Unchanged);
+                        
                     }
 
                     foreach (var user in test.Users)
                     {
+                        //db.Users.Detach(user);
                         db.ObjectStateManager.ChangeObjectState(user, EntityState.Unchanged);
+                        
                     }
 
-                    db.DetectChanges();
-                    db.SaveChanges();
+                    
+
+                    //db.DetectChanges();
+                    db.SaveChanges(SaveOptions.AcceptAllChangesAfterSave);
                 }
 
             }

@@ -32,8 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,53 +43,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Activity.cs">
+    <Compile Include="DomainConstants.cs" />
+    <Compile Include="Entities.old\Activity.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Child.cs">
+    <Compile Include="Entities.old\Child.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\hstdb.cs">
+    <Compile Include="Entities.old\hstdb.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Entities\Lesson.cs">
+    <Compile Include="Entities.old\Lesson.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\School.cs">
+    <Compile Include="Entities.old\School.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\StateRequiredSubject.cs">
+    <Compile Include="Entities.old\StateRequiredSubject.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Subject.cs">
+    <Compile Include="Entities.old\Subject.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Test.cs">
+    <Compile Include="Entities.old\Test.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\TestResult.cs">
+    <Compile Include="Entities.old\TestResult.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities\User.cs">
+    <Compile Include="Entities.old\User.cs">
       <DependentUpon>hstdb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Activity.cs" />
+    <Compile Include="Model\Image.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\Chore.cs" />
+    <Compile Include="Model\ChoreAssignment.cs" />
+    <Compile Include="Model\Entity.cs" />
     <Compile Include="Enums\AuditAction.cs" />
+    <Compile Include="Model\Lesson.cs" />
+    <Compile Include="Model\School.cs" />
+    <Compile Include="Model\Subject.cs" />
+    <Compile Include="Model\Test.cs" />
+    <Compile Include="Model\TestResult.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\Other\SubjectQueries.cs" />
+    <Compile Include="Queries\Other\SchoolQueries.cs" />
+    <Compile Include="Queries\People\StudentQueries.cs" />
+    <Compile Include="Queries\People\UserQueries.cs" />
+    <Compile Include="Resources\ValidationMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationMessages.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
+    <Folder Include="Queries\Records\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Entities\hstdb.tt">
+    <None Include="Entities.old\hstdb.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>hstdb.cs</LastGenOutput>
       <CustomToolNamespace>Hst.Domain.Entities</CustomToolNamespace>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ValidationMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hst.Core\Hst.Core.csproj">
+      <Project>{F3EDFBD6-7660-462D-9FB0-54D3F37E8E2B}</Project>
+      <Name>Hst.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

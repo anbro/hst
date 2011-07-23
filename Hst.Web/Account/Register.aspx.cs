@@ -6,8 +6,10 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Hst.DataAccess;
-using Hst.Domain.Entities;
+using Hst.Core.Storage;
+//using Hst.DataAccess;
+using Hst.Domain.Model;
+using Hst.Services;
 
 public partial class Account_Register : System.Web.UI.Page
 {
@@ -39,35 +41,36 @@ public partial class Account_Register : System.Web.UI.Page
                 createSchool = true;
             }
         }
-        
-        // Create the user object
-        var u = new User();
-        u.Email = RegisterUser.Email;
-        u.Login = RegisterUser.UserName;
-        u.NameFirst = txtFirstname.Text;
-        u.NameLast = txtLastname.Text;
-        u.IsActive = true;
-        u.IsTeacher = createSchool;
 
-        if (createSchool)
+        using (var db = ServiceEngine.Instance.IoC.Resolve<IEntityStore>())
         {
-            // Create the school object, if needed
-            var s = new School();
-            s.SchoolName = txtSchoolname.Text;
-            s.DateJoined = DateTime.Today;
+            // Create the user object
+            var u = new User();
+            u.Email = RegisterUser.Email;
+            u.Login = RegisterUser.UserName;
+            u.NameFirst = txtFirstname.Text;
+            u.NameLast = txtLastname.Text;
+            u.IsActive = true;
+            u.IsTeacher = createSchool;
 
-            var sa = new SchoolAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
-            sa.CreateSchool(s);
+            if (createSchool)
+            {
+                // Create the school object, if needed
+                var s = new School();
+                s.SchoolName = txtSchoolname.Text;
+                s.JoinedOn = DateTime.Today;
 
-            u.SchoolId = s.Id;
+                db.AddEntity<School>(s);
+                //var sa = new SchoolAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
+                //sa.CreateSchool(s);
+
+                u.School = s;
+
+            }
+            db.AddEntity(u);
+            db.SaveChanges();
         }
         
-        var ua = new UserAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
-        ua.PersistUser(u);
-        //Profile.User = u;
-        //Profile.Save();
-
-
         string continueUrl = RegisterUser.ContinueDestinationPageUrl;
         if (String.IsNullOrEmpty(continueUrl))
         {

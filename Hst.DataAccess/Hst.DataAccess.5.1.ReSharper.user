@@ -9,68 +9,68 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedSubjects.ascx" caret="303" fromTop="3" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedStudent.ascx" caret="115" fromTop="1" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedStudent.ascx.cs" caret="216" fromTop="9" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedSubject.ascx" caret="290" fromTop="3" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedSubject.ascx.cs" caret="491" fromTop="20" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedStudents.ascx.cs" caret="2064" fromTop="68" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedSubjects.ascx.cs" caret="1294" fromTop="17" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SubjectSelector.ascx.cs" caret="1881" fromTop="28" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedRecordType.ascx" caret="121" fromTop="1" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedDate.ascx" caret="457" fromTop="7" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:ChildSelector.ascx.cs" caret="741" fromTop="18" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:IndividualChild.ascx.cs" caret="317" fromTop="12" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedRecordType.ascx.cs" caret="758" fromTop="30" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:SelectedDate.ascx.cs" caret="479" fromTop="17" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/d:Styles/f:Site.css" caret="9608" fromTop="35" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:SubjectAccessor.cs" caret="190" fromTop="10" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:hstdb.Context.cs" caret="3393" fromTop="97" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:hstdb.Context.tt" caret="0" fromTop="0" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Site.master" caret="1024" fromTop="19" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Global.asax" caret="0" fromTop="0" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Web.config" caret="1632" fromTop="21" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx.cs" caret="408" fromTop="17" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:StudentAccessor.cs" caret="320" fromTop="14" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:UserAccessor.cs" caret="1400" fromTop="11" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="7953" fromTop="11" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="1732" fromTop="17" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:Subject.cs" caret="164" fromTop="8" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:Test.cs" caret="741" fromTop="19" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:TestResult.cs" caret="164" fromTop="8" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:EntityMapping.cs" caret="403" fromTop="15" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ImageMapping.cs" caret="342" fromTop="15" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:Activity.cs" caret="1002" fromTop="28" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ChoreAssignmentMapping.cs" caret="580" fromTop="0" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ChoreMapping.cs" caret="564" fromTop="24" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:LessonMapping.cs" caret="827" fromTop="19" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:StudentMapping.cs" caret="659" fromTop="7" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:SubjectMapping.cs" caret="413" fromTop="17" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ActivityMapping.cs" caret="869" fromTop="19" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:TestMapping.cs" caret="757" fromTop="18" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:TestResultMapping.cs" caret="516" fromTop="21" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:School.cs" caret="1158" fromTop="24" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:User.cs" caret="164" fromTop="0" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:SchoolMapping.cs" caret="156" fromTop="8" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:UserMapping.cs" caret="610" fromTop="14" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="2808" fromTop="19" />
       <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="0" fromTop="0" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="845" fromTop="14" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:TimeSpentSelector.ascx.cs" caret="0" fromTop="0" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:TimeSpentSelector.ascx" caret="119" fromTop="1" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:StudentAccessor.cs" caret="427" fromTop="18" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:UserAccessor.cs" caret="2307" fromTop="68" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="2353" fromTop="28" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:SubjectAccessor.cs" caret="1053" fromTop="11" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:ChildAccessor.cs" caret="2178" fromTop="53" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Queries/d:People/f:StudentQueries.cs" caret="773" fromTop="22" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:SchoolAccessor.cs" caret="0" fromTop="0" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Queries/d:Other/f:SchoolQueries.cs" caret="414" fromTop="15" />
+      <File id="CD3987A1-B01F-41F6-9423-657C1F70381B/f:DataContext.cs" caret="500" fromTop="10" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Site.master.cs" caret="680" fromTop="14" />
     </RecentFiles>
     <RecentEdits>
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="8052" fromTop="20" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="7900" fromTop="20" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="1671" fromTop="29" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="976" fromTop="9" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="1619" fromTop="20" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="7006" fromTop="19" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="6931" fromTop="14" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="7500" fromTop="20" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:UserAccessor.cs" caret="1518" fromTop="28" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1172" fromTop="37" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1172" fromTop="27" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="4379" fromTop="28" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx.cs" caret="280" fromTop="11" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="9697" fromTop="30" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1172" fromTop="20" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1172" fromTop="28" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="3188" fromTop="26" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="3765" fromTop="17" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Site.master" caret="1024" fromTop="13" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="2249" fromTop="28" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx.cs" caret="709" fromTop="31" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="248" fromTop="2" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="118" fromTop="2" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="1211" fromTop="22" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx.cs" caret="408" fromTop="17" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:RecordActivity.ascx" caret="1125" fromTop="29" />
-      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:RecordAccessor.cs" caret="173" fromTop="9" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:TimeSpentSelector.ascx" caret="121" fromTop="8" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx" caret="845" fromTop="14" />
-      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:TimeSpentSelector.ascx" caret="119" fromTop="1" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:ChoreAssignment.cs" caret="535" fromTop="19" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:ChoreAssignment.cs" caret="719" fromTop="26" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:Image.cs" caret="359" fromTop="13" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ChoreMapping.cs" caret="564" fromTop="24" />
+      <File id="981EE38B-278E-40D0-8E86-B7FE69ED64F9/f:HstDbContext.cs" caret="1094" fromTop="16" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:StudentMapping.cs" caret="988" fromTop="17" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ChoreAssignmentMapping.cs" caret="687" fromTop="28" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:Student.cs" caret="1350" fromTop="24" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:Student.cs" caret="596" fromTop="3" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:School.cs" caret="572" fromTop="10" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:User.cs" caret="173" fromTop="2" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ImageMapping.cs" caret="342" fromTop="15" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Model/f:School.cs" caret="919" fromTop="16" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ActivityMapping.cs" caret="867" fromTop="18" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ChoreAssignmentMapping.cs" caret="687" fromTop="17" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:LessonMapping.cs" caret="863" fromTop="19" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:StudentMapping.cs" caret="1015" fromTop="25" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:TestMapping.cs" caret="757" fromTop="18" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:UserMapping.cs" caret="1043" fromTop="23" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ActivityMapping.cs" caret="865" fromTop="8" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:ChoreAssignmentMapping.cs" caret="687" fromTop="15" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:LessonMapping.cs" caret="827" fromTop="19" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:StudentMapping.cs" caret="984" fromTop="25" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:TestMapping.cs" caret="757" fromTop="18" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:UserMapping.cs" caret="1005" fromTop="23" />
+      <File id="74772D90-82BA-4B45-9FC4-C27737EEEFFB/d:Mappings/f:UserMapping.cs" caret="850" fromTop="22" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Record.aspx.cs" caret="2817" fromTop="19" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Queries/d:People/f:StudentQueries.cs" caret="782" fromTop="22" />
+      <File id="1D2685A9-E35E-44C8-BEF5-479E2910D307/d:Queries/d:Other/f:SchoolQueries.cs" caret="414" fromTop="15" />
+      <File id="2600806E-7A18-4732-AECA-64C3985F1DF9/f:Site.master.cs" caret="680" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -86,52 +86,52 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="35" />
-      <Item value="prop" priority="61" />
+      <Item value="public" priority="137" />
+      <Item value="prop" priority="62" />
       <Item value="Guid`0" priority="1" />
-      <Item value="DateTime`0" priority="18" />
+      <Item value="DateTime`0" priority="24" />
       <Item value="override" priority="2" />
-      <Item value="string" priority="54" />
-      <Item value="bool" priority="7" />
-      <Item value="User`0" priority="8" />
+      <Item value="string" priority="80" />
+      <Item value="bool" priority="12" />
+      <Item value="User`0" priority="20" />
       <Item value="BaseEntity`0" priority="12" />
-      <Item value="Child`0" priority="16" />
+      <Item value="Child`0" priority="21" />
       <Item value="StateRequiredSubject`0" priority="0" />
-      <Item value="Subject`0" priority="8" />
-      <Item value="Activity`0" priority="3" />
+      <Item value="Subject`0" priority="14" />
+      <Item value="Activity`0" priority="8" />
       <Item value="Activity" priority="0" />
       <Item value="Teacher`0" priority="3" />
-      <Item value="int" priority="9" />
-      <Item value="TimeSpan`0" priority="1" />
-      <Item value="Lesson`0" priority="2" />
-      <Item value="Test`0" priority="1" />
-      <Item value="using" priority="14" />
+      <Item value="int" priority="25" />
+      <Item value="TimeSpan`0" priority="2" />
+      <Item value="Lesson`0" priority="7" />
+      <Item value="Test`0" priority="8" />
+      <Item value="using" priority="26" />
       <Item value="HtmlString`0" priority="0" />
-      <Item value="Hst" priority="3" />
+      <Item value="Hst" priority="6" />
       <Item value="DataAccess" priority="1" />
-      <Item value="HstDBContainer`0" priority="9" />
-      <Item value="new" priority="45" />
+      <Item value="HstDBContainer`0" priority="14" />
+      <Item value="new" priority="83" />
       <Item value="HstDBContainer" priority="0" />
       <Item value="dbc" priority="0" />
       <Item value="SchoolAccessor`0" priority="2" />
       <Item value="private" priority="12" />
-      <Item value="static" priority="1" />
-      <Item value="var" priority="51" />
-      <Item value="db" priority="49" />
-      <Item value="_connectionString" priority="10" />
+      <Item value="static" priority="8" />
+      <Item value="var" priority="73" />
+      <Item value="db" priority="91" />
+      <Item value="_connectionString" priority="15" />
       <Item value="connectionString" priority="2" />
-      <Item value="from" priority="7" />
-      <Item value="where" priority="6" />
-      <Item value="s" priority="10" />
-      <Item value="u" priority="32" />
-      <Item value="select" priority="7" />
-      <Item value="if" priority="50" />
-      <Item value="result" priority="17" />
-      <Item value="null" priority="10" />
-      <Item value="else" priority="6" />
-      <Item value="return" priority="30" />
-      <Item value="void" priority="9" />
-      <Item value="School`0" priority="1" />
+      <Item value="from" priority="16" />
+      <Item value="where" priority="11" />
+      <Item value="s" priority="30" />
+      <Item value="u" priority="51" />
+      <Item value="select" priority="14" />
+      <Item value="if" priority="57" />
+      <Item value="result" priority="28" />
+      <Item value="null" priority="11" />
+      <Item value="else" priority="9" />
+      <Item value="return" priority="41" />
+      <Item value="void" priority="14" />
+      <Item value="School`0" priority="7" />
       <Item value="sbyte" priority="0" />
       <Item value="SaveOptions" priority="0" />
       <Item value="SaveOptions`0" priority="0" />
@@ -141,38 +141,38 @@
       <Item value="ArgumentOutOfRangeException" priority="0" />
       <Item value="ApplicationException" priority="2" />
       <Item value="passwordHash" priority="2" />
-      <Item value="false" priority="5" />
-      <Item value="c" priority="3" />
-      <Item value="child" priority="14" />
-      <Item value="true" priority="5" />
+      <Item value="false" priority="8" />
+      <Item value="c" priority="11" />
+      <Item value="child" priority="19" />
+      <Item value="true" priority="9" />
       <Item value="SchoolAccessor" priority="0" />
       <Item value="ConfigurationManager`0" priority="1" />
-      <Item value="sa" priority="2" />
+      <Item value="sa" priority="3" />
       <Item value="UserAccessor" priority="3" />
       <Item value="ua" priority="7" />
       <Item value="username" priority="1" />
-      <Item value="System" priority="3" />
+      <Item value="System" priority="5" />
       <Item value="Security" priority="1" />
       <Item value="Cryptography" priority="1" />
-      <Item value="byte" priority="1" />
+      <Item value="byte" priority="3" />
       <Item value="password" priority="0" />
       <Item value="HashAlgorithm`0" priority="0" />
       <Item value="bytes" priority="0" />
-      <Item value="Convert`0" priority="1" />
+      <Item value="Convert`0" priority="2" />
       <Item value="inArray" priority="0" />
       <Item value="PasswordStrengthRegularExpression" priority="0" />
       <Item value="newPassword" priority="0" />
       <Item value="Passwords`0" priority="0" />
       <Item value="oldPassword" priority="0" />
       <Item value="oldHashedPw" priority="0" />
-      <Item value="user" priority="14" />
+      <Item value="user" priority="18" />
       <Item value="hashedPW" priority="0" />
       <Item value="RegisterUser" priority="3" />
       <Item value="as" priority="12" />
       <Item value="pnl" priority="2" />
       <Item value="RadioButtonList`0" priority="0" />
       <Item value="rblist" priority="3" />
-      <Item value="foreach" priority="19" />
+      <Item value="foreach" priority="33" />
       <Item value="AspCompatBeginProcessRequest`0" priority="0" />
       <Item value="item" priority="0" />
       <Item value="Panel`0" priority="2" />
@@ -182,23 +182,23 @@
       <Item value="TextBox`0" priority="2" />
       <Item value="txtLastname" priority="1" />
       <Item value="txtSchoolname" priority="2" />
-      <Item value="MembershipUser" priority="2" />
-      <Item value="User" priority="2" />
-      <Item value="Domain" priority="0" />
+      <Item value="MembershipUser" priority="3" />
+      <Item value="User" priority="5" />
+      <Item value="Domain" priority="1" />
       <Item value="Entities" priority="0" />
       <Item value="txtFirstname" priority="0" />
-      <Item value="School" priority="0" />
+      <Item value="School" priority="3" />
       <Item value="ListItem`0" priority="0" />
       <Item value="li" priority="0" />
       <Item value="createSchool" priority="1" />
       <Item value="IsPostBack" priority="4" />
       <Item value="Membership`0" priority="1" />
-      <Item value="mu" priority="4" />
+      <Item value="mu" priority="5" />
       <Item value="NonSerialized" priority="0" />
       <Item value="lblSchoolName" priority="0" />
       <Item value="CompareValidator`0" priority="0" />
       <Item value="_studentFirstName" priority="2" />
-      <Item value="value" priority="12" />
+      <Item value="value" priority="13" />
       <Item value="_studentLastName" priority="1" />
       <Item value="_studentDateOfBirth" priority="5" />
       <Item value="_studentAge" priority="4" />
@@ -209,7 +209,7 @@
       <Item value="lblStudentAge" priority="2" />
       <Item value="Register" priority="0" />
       <Item value="IndividualStudentSelector" priority="0" />
-      <Item value="List" priority="17" />
+      <Item value="List" priority="30" />
       <Item value="ChildSelector`0" priority="6" />
       <Item value="_children" priority="6" />
       <Item value="List&lt;Child&gt;" priority="3" />
@@ -220,12 +220,12 @@
       <Item value="ChildSelector" priority="1" />
       <Item value="ChildAccessor`0" priority="1" />
       <Item value="NotFiniteNumberException" priority="0" />
-      <Item value="children" priority="4" />
+      <Item value="children" priority="5" />
       <Item value="cs" priority="4" />
       <Item value="ChildAccessor" priority="0" />
-      <Item value="a" priority="0" />
+      <Item value="a" priority="22" />
       <Item value="Panel" priority="1" />
-      <Item value="this" priority="1" />
+      <Item value="this" priority="12" />
       <Item value="pnlStudentsList" priority="5" />
       <Item value="Page" priority="0" />
       <Item value="LoadControl`0" priority="7" />
@@ -241,23 +241,23 @@
       <Item value="List&lt;IndividualChild&gt;" priority="1" />
       <Item value="childselector" priority="0" />
       <Item value="studentControl" priority="2" />
-      <Item value="protected" priority="4" />
+      <Item value="protected" priority="5" />
       <Item value="Repeater`0" priority="0" />
       <Item value="rpStudentsList" priority="1" />
       <Item value="DataBinder`0" priority="2" />
       <Item value="Container" priority="2" />
       <Item value="_numChildren" priority="5" />
       <Item value="for" priority="0" />
-      <Item value="i" priority="1" />
+      <Item value="i" priority="2" />
       <Item value="ViewState" priority="14" />
-      <Item value="Int32`0" priority="0" />
+      <Item value="Int32`0" priority="3" />
       <Item value="num" priority="3" />
       <Item value="out" priority="0" />
       <Item value="_studentName" priority="1" />
       <Item value="ss" priority="11" />
       <Item value="String`0" priority="0" />
       <Item value="StudentDateOfBirth" priority="1" />
-      <Item value="Serializable" priority="0" />
+      <Item value="Serializable" priority="12" />
       <Item value="SelectedStudents`0" priority="1" />
       <Item value="NumChildren" priority="0" />
       <Item value="Children" priority="0" />
@@ -280,11 +280,11 @@
       <Item value="IndividualSubject`0" priority="2" />
       <Item value="pnlSubjectsList" priority="1" />
       <Item value="_subjects" priority="0" />
-      <Item value="subject" priority="5" />
+      <Item value="subject" priority="8" />
       <Item value="_numSubjects" priority="0" />
       <Item value="pnlSubjects" priority="1" />
-      <Item value="List&lt;Subject&gt;" priority="1" />
-      <Item value="results" priority="1" />
+      <Item value="List&lt;Subject&gt;" priority="4" />
+      <Item value="results" priority="3" />
       <Item value="SubjectSelector`0" priority="1" />
       <Item value="switch" priority="1" />
       <Item value="case" priority="3" />
@@ -293,7 +293,7 @@
       <Item value="default" priority="1" />
       <Item value="pnlSelectedSubjects" priority="4" />
       <Item value="SelectedSubject`0" priority="0" />
-      <Item value="sub" priority="0" />
+      <Item value="sub" priority="2" />
       <Item value="sss" priority="0" />
       <Item value="subjectControl" priority="2" />
       <Item value="BuildSelectedSubjectsSummary`0" priority="0" />
@@ -310,45 +310,187 @@
       <Item value="pnlRecordDetails" priority="0" />
       <Item value="VerifyRenderingInServerForm`0" priority="0" />
       <Item value="ThemeableAttribute`0" priority="0" />
-      <Item value="IAppDomainSetup`0" priority="0" />
+      <Item value="IAppDomainSetup`0" priority="1" />
       <Item value="GetSelectedStudents`0" priority="0" />
       <Item value="GetSelectedSubjects`0" priority="0" />
-      <Item value="student" priority="3" />
-      <Item value="activity" priority="16" />
-      <Item value="recordDate" priority="0" />
+      <Item value="student" priority="5" />
+      <Item value="activity" priority="17" />
+      <Item value="recordDate" priority="1" />
       <Item value="activities" priority="0" />
-      <Item value="RecordAccessor`0" priority="0" />
-      <Item value="recordaccessor" priority="0" />
-      <Item value="subjects" priority="0" />
+      <Item value="RecordAccessor`0" priority="1" />
+      <Item value="recordaccessor" priority="2" />
+      <Item value="subjects" priority="1" />
       <Item value="StudentAccessor`0" priority="0" />
       <Item value="studentaccessor" priority="0" />
       <Item value="txtTimeSpent" priority="1" />
-      <Item value="students" priority="0" />
+      <Item value="students" priority="7" />
       <Item value="Response" priority="0" />
-      <Item value="Unchanged" priority="2" />
+      <Item value="Unchanged" priority="4" />
       <Item value="hidActivityNotesClientID" priority="1" />
       <Item value="Reference" priority="0" />
       <Item value="HiddenField`0" priority="0" />
       <Item value="Always" priority="0" />
+      <Item value="Horizontal" priority="0" />
+      <Item value="rbTimeSpent" priority="0" />
+      <Item value="ScriptManager`0" priority="0" />
+      <Item value="GetType`0" priority="0" />
+      <Item value="script" priority="0" />
+      <Item value="ca" priority="5" />
+      <Item value="object" priority="1" />
+      <Item value="SelectedDatesCollection`0" priority="0" />
+      <Item value="WebMethodAttribute`0" priority="1" />
+      <Item value="OperationContractAttribute`0" priority="1" />
+      <Item value="childaccessor" priority="0" />
+      <Item value="ids" priority="2" />
+      <Item value="studentids" priority="1" />
+      <Item value="SubjectAccessor`0" priority="0" />
+      <Item value="subjectids" priority="0" />
+      <Item value="activityDescription" priority="0" />
+      <Item value="timeSpent" priority="3" />
+      <Item value="activityName" priority="0" />
+      <Item value="l" priority="8" />
+      <Item value="lesson" priority="5" />
+      <Item value="lessonTitle" priority="0" />
+      <Item value="TimeSpan" priority="0" />
+      <Item value="timeValid" priority="1" />
+      <Item value="ArgumentException" priority="0" />
+      <Item value="class" priority="0" />
+      <Item value="TestScoreDTO`0" priority="0" />
+      <Item value="scores" priority="3" />
+      <Item value="List&lt;int&gt;" priority="0" />
+      <Item value="testScoreDto" priority="0" />
+      <Item value="TestResult`0" priority="4" />
+      <Item value="t" priority="6" />
+      <Item value="test" priority="15" />
+      <Item value="ts" priority="1" />
+      <Item value="testscores" priority="0" />
+      <Item value="testName" priority="0" />
+      <Item value="totalQuestions" priority="0" />
+      <Item value="TestResult" priority="0" />
+      <Item value="tr" priority="10" />
+      <Item value="score" priority="4" />
+      <Item value="EntityState`0" priority="0" />
+      <Item value="Modified" priority="0" />
+      <Item value="Added" priority="0" />
+      <Item value="AcceptAllChangesAfterSave" priority="0" />
+      <Item value="Namespace" priority="2" />
+      <Item value="IsReference" priority="2" />
+      <Item value="virtual" priority="49" />
+      <Item value="DataMember" priority="41" />
+      <Item value="Name" priority="0" />
+      <Item value="DomainConstants`0" priority="0" />
+      <Item value="ErrorMessageResourceType" priority="2" />
+      <Item value="typeof" priority="2" />
+      <Item value="ErrorMessageResourceName" priority="2" />
+      <Item value="AllowEmptyStrings" priority="0" />
+      <Item value="ValidationMessages`0" priority="1" />
+      <Item value="MaxLength" priority="0" />
+      <Item value="MinLength" priority="0" />
+      <Item value="DataTypeAttribute`0" priority="0" />
+      <Item value="DataType" priority="0" />
+      <Item value="DataType`0" priority="1" />
+      <Item value="Required" priority="0" />
+      <Item value="IList" priority="14" />
+      <Item value="Entity`0" priority="2" />
+      <Item value="Student`0" priority="12" />
+      <Item value="AccessibleStudents" priority="0" />
+      <Item value="List&lt;Student&gt;" priority="3" />
+      <Item value="Subjects" priority="1" />
+      <Item value="Results" priority="0" />
+      <Item value="List&lt;TestResult&gt;" priority="1" />
+      <Item value="Students" priority="1" />
+      <Item value="enum" priority="0" />
+      <Item value="Frequency`0" priority="0" />
+      <Item value="Chore`0" priority="2" />
+      <Item value="List&lt;User&gt;" priority="1" />
+      <Item value="AssociatedUsers" priority="0" />
+      <Item value="Activities" priority="0" />
+      <Item value="List&lt;Activity&gt;" priority="0" />
+      <Item value="List&lt;Lesson&gt;" priority="0" />
+      <Item value="StoreGeneratedPattern`0" priority="0" />
+      <Item value="EntityMapping" priority="10" />
+      <Item value="UserMapping`0" priority="1" />
+      <Item value="Property`0" priority="37" />
+      <Item value="Microsoft" priority="0" />
+      <Item value="Data" priority="1" />
+      <Item value="Objects" priority="0" />
+      <Item value="HasRequired`1" priority="10" />
+      <Item value="SchoolMapping`0" priority="0" />
+      <Item value="DbSet`0" priority="9" />
+      <Item value="ChoreRecord`0" priority="0" />
+      <Item value="HstDbContext`0" priority="5" />
+      <Item value="Database`0" priority="1" />
+      <Item value="DropCreateDatabaseIfModelChanges" priority="0" />
+      <Item value="HstDbContext" priority="0" />
+      <Item value="base" priority="0" />
+      <Item value="connString" priority="1" />
+      <Item value="DeploymentItem" priority="0" />
+      <Item value="Assert`0" priority="0" />
+      <Item value="EntityModel" priority="0" />
+      <Item value="DbModelBuilder`0" priority="1" />
+      <Item value="HstEntityContext`0" priority="5" />
+      <Item value="CreateContext`0" priority="1" />
+      <Item value="DbModelBuilder" priority="0" />
+      <Item value="dbm" priority="1" />
+      <Item value="Build`0" priority="1" />
+      <Item value="cn" priority="1" />
+      <Item value="RegisterEntity`1" priority="1" />
+      <Item value="TEntity`0" priority="1" />
+      <Item value="_factory" priority="0" />
+      <Item value="_cnStringSettings" priority="0" />
+      <Item value="ValueType`0" priority="0" />
+      <Item value="Storage" priority="2" />
+      <Item value="Ef" priority="0" />
+      <Item value="EntityConnection" priority="0" />
+      <Item value="Services" priority="0" />
+      <Item value="ServiceComponentContainer`0" priority="0" />
+      <Item value="ec" priority="0" />
+      <Item value="CreateDatabaseIfNotExists" priority="0" />
+      <Item value="CreateDatabase`0" priority="0" />
+      <Item value="ActivityMapping`0" priority="0" />
+      <Item value="HasMany`1" priority="13" />
+      <Item value="StudentMapping`0" priority="0" />
+      <Item value="b" priority="0" />
+      <Item value="LessonMapping`0" priority="0" />
+      <Item value="lock" priority="0" />
+      <Item value="SubjectMapping`0" priority="0" />
+      <Item value="TestMapping`0" priority="1" />
+      <Item value="r" priority="0" />
+      <Item value="TestResultMapping`0" priority="0" />
+      <Item value="ChoreMapping`0" priority="0" />
+      <Item value="ChoreAssignment`0" priority="1" />
+      <Item value="ChoreAssignmentMapping`0" priority="0" />
+      <Item value="HasOptional`1" priority="0" />
+      <Item value="AssignedChores" priority="0" />
+      <Item value="List&lt;ChoreAssignment&gt;" priority="0" />
+      <Item value="ImageMapping`0" priority="0" />
+      <Item value="IQueryable`0" priority="5" />
+      <Item value="id" priority="0" />
+      <Item value="SchoolQueries`0" priority="0" />
+      <Item value="schools" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Configuration.ConfigurationManager">
-      <Item value="ConnectionStrings" priority="5" />
+      <Item value="ConnectionStrings" priority="6" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Configuration.ConnectionStringSettings">
-      <Item value="ConnectionString" priority="5" />
+      <Item value="ConnectionString" priority="6" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.DataAccess.HstDBContainer">
       <Item value="Schools" priority="1" />
-      <Item value="SaveChanges`0" priority="4" />
-      <Item value="Users" priority="14" />
-      <Item value="Children" priority="12" />
+      <Item value="SaveChanges`0" priority="8" />
+      <Item value="Users" priority="16" />
+      <Item value="Children" priority="13" />
       <Item value="ApplyCurrentValues`1" priority="1" />
       <Item value="LoadProperty`1" priority="3" />
-      <Item value="Subjects" priority="2" />
-      <Item value="Activities" priority="6" />
+      <Item value="Subjects" priority="3" />
+      <Item value="Activities" priority="7" />
       <Item value="AddObject`0" priority="0" />
-      <Item value="DetectChanges`0" priority="1" />
-      <Item value="ObjectStateManager" priority="5" />
+      <Item value="DetectChanges`0" priority="2" />
+      <Item value="ObjectStateManager" priority="10" />
+      <Item value="ContextOptions" priority="2" />
+      <Item value="Lessons" priority="3" />
+      <Item value="TestResults" priority="6" />
+      <Item value="Tests" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.Domain.Entities.School">
       <Item value="Users" priority="1" />
@@ -359,13 +501,15 @@
     <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
       <Item value="Contains`0" priority="2" />
       <Item value="Any`1" priority="0" />
-      <Item value="Add`0" priority="4" />
+      <Item value="Add`0" priority="6" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
-      <Item value="Count`1" priority="0" />
+      <Item value="Count`1" priority="2" />
       <Item value="First`1" priority="5" />
-      <Item value="AsEnumerable`1" priority="1" />
+      <Item value="AsEnumerable`1" priority="3" />
       <Item value="ToList`1" priority="0" />
+      <Item value="Where`1" priority="3" />
+      <Item value="FirstOrDefault`1" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="Empty" priority="4" />
@@ -373,11 +517,12 @@
     <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
       <Item value="AddObject`0" priority="0" />
       <Item value="Contains`1" priority="0" />
-      <Item value="Attach`0" priority="4" />
-      <Item value="ApplyCurrentValues`0" priority="0" />
+      <Item value="Attach`0" priority="6" />
+      <Item value="ApplyCurrentValues`0" priority="2" />
       <Item value="CreateObject`1" priority="0" />
       <Item value="EntitySet" priority="0" />
       <Item value="MergeOption" priority="0" />
+      <Item value="Detach`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.Domain.Entities.User">
       <Item value="Login" priority="5" />
@@ -389,14 +534,18 @@
       <Item value="IsActive" priority="0" />
       <Item value="SchoolId" priority="0" />
       <Item value="Id" priority="1" />
-      <Item value="School" priority="1" />
+      <Item value="School" priority="2" />
+      <Item value="Lessons" priority="0" />
+      <Item value="Activities" priority="0" />
+      <Item value="Children" priority="0" />
+      <Item value="Tests" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.Domain.Entities.Child">
-      <Item value="Id" priority="0" />
+      <Item value="Id" priority="3" />
       <Item value="Users" priority="1" />
       <Item value="DateOfBirth" priority="1" />
-      <Item value="NameFirst" priority="1" />
-      <Item value="NameLast" priority="1" />
+      <Item value="NameFirst" priority="2" />
+      <Item value="NameLast" priority="3" />
       <Item value="Activities" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.DataAccess.SchoolAccessor">
@@ -423,7 +572,7 @@
     <ItemStatistics item="Qualified:@System.Convert">
       <Item value="ToBase64CharArray`0" priority="0" />
       <Item value="ToBase64String`0" priority="0" />
-      <Item value="ToInt32`0" priority="0" />
+      <Item value="ToInt32`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Hst.Security.Passwords">
       <Item value="EncodePasswordToBase64`0" priority="1" />
@@ -431,6 +580,7 @@
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.RadioButtonList">
       <Item value="RepeatDirection" priority="0" />
       <Item value="RepeatColumns" priority="0" />
+      <Item value="ClientID" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.CreateUserWizard">
       <Item value="Controls" priority="0" />
@@ -447,6 +597,7 @@
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListItem">
       <Item value="Value" priority="0" />
       <Item value="Selected" priority="1" />
+      <Item value="Text" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.CreateUserWizardStep">
       <Item value="ContentTemplate" priority="0" />
@@ -474,9 +625,10 @@
       <Item value="ClientID" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.DateTime">
-      <Item value="Today" priority="5" />
+      <Item value="Today" priority="6" />
       <Item value="Parse`0" priority="3" />
       <Item value="MinValue" priority="0" />
+      <Item value="Now" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Web.Security.Membership">
       <Item value="GetUser`0" priority="2" />
@@ -487,6 +639,7 @@
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
       <Item value="First`1" priority="2" />
       <Item value="AsEnumerable`1" priority="0" />
+      <Item value="FirstOrDefault`1" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.Label">
       <Item value="Text" priority="2" />
@@ -526,11 +679,16 @@
       <Item value="StudentControls" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.DataAccess.ChildAccessor">
-      <Item value="GetChildrenByUser`0" priority="0" />
+      <Item value="GetChildrenByUser`0" priority="2" />
+      <Item value="GetChildrenByIds`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Add`0" priority="9" />
+      <Item value="Add`0" priority="11" />
       <Item value="Count" priority="1" />
+      <Item value="Contains`0" priority="2" />
+      <Item value="All`1" priority="0" />
+      <Item value="Select`2" priority="0" />
+      <Item value="Where`1" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.Page">
       <Item value="Controls" priority="0" />
@@ -559,7 +717,8 @@
       <Item value="ToString`0" priority="9" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
-      <Item value="TryParse`0" priority="0" />
+      <Item value="TryParse`0" priority="1" />
+      <Item value="Parse`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SelectedStudent">
       <Item value="StudentName" priority="0" />
@@ -591,7 +750,8 @@
       <Item value="IsChecked" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.Domain.Entities.Subject">
-      <Item value="Name" priority="1" />
+      <Item value="Name" priority="2" />
+      <Item value="Id" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:SubjectSelector">
       <Item value="ID" priority="0" />
@@ -600,7 +760,8 @@
       <Item value="SubjectControls" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.DataAccess.SubjectAccessor">
-      <Item value="GetAllSubjects`0" priority="0" />
+      <Item value="GetAllSubjects`0" priority="1" />
+      <Item value="GetSubjectsByIds`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.Image">
       <Item value="ImageUrl" priority="2" />
@@ -632,7 +793,9 @@
       <Item value="Users" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.DataAccess.RecordAccessor">
-      <Item value="PersistActivity`0" priority="0" />
+      <Item value="PersistActivity`0" priority="1" />
+      <Item value="PersistTest`0" priority="0" />
+      <Item value="PersistTestScore`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Hst.DataAccess.StudentAccessor">
       <Item value="PersistStudent`0" priority="0" />
@@ -641,7 +804,7 @@
       <Item value="Redirect`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Objects.ObjectStateManager">
-      <Item value="ChangeObjectState`0" priority="3" />
+      <Item value="ChangeObjectState`0" priority="8" />
       <Item value="ChangeRelationshipState`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
@@ -652,6 +815,228 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.UpdatePanel">
       <Item value="UpdateMode" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.UI.ScriptManager">
+      <Item value="RegisterStartupScript`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.ScriptManager">
+      <Item value="EnablePageMethods" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Entities.Lesson">
+      <Item value="Id" priority="1" />
+      <Item value="Children" priority="0" />
+      <Item value="LessonDate" priority="0" />
+      <Item value="LessonTitle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TestScoreDTO">
+      <Item value="StudentId" priority="3" />
+      <Item value="Correct" priority="0" />
+      <Item value="NotAnswered" priority="0" />
+      <Item value="Incorrect" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Entities.Test">
+      <Item value="Id" priority="1" />
+      <Item value="TestResults" priority="0" />
+      <Item value="Subjects" priority="0" />
+      <Item value="TestName" priority="0" />
+      <Item value="Questions" priority="0" />
+      <Item value="TestDate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Entities.TestResult">
+      <Item value="Id" priority="1" />
+      <Item value="Tests" priority="2" />
+      <Item value="Children" priority="0" />
+      <Item value="Correct" priority="0" />
+      <Item value="NotAnswered" priority="0" />
+      <Item value="Incorrect" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.EntityState">
+      <Item value="Unchanged" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Hst.Domain.DomainConstants">
+      <Item value="DataContractNamespace" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.ComponentModel.DataAnnotations.DataType">
+      <Item value="DateTime" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.PrimitivePropertyConfiguration">
+      <Item value="HasDatabaseGeneratedOption`0" priority="0" />
+      <Item value="IsRequired`0" priority="11" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.BinaryPropertyConfiguration">
+      <Item value="HasColumnType`0" priority="0" />
+      <Item value="HasDatabaseGeneratedOption`0" priority="0" />
+      <Item value="IsRequired`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.Metadata.Edm.StoreGeneratedPattern">
+      <Item value="Computed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.User">
+      <Item value="Email" priority="2" />
+      <Item value="Login" priority="1" />
+      <Item value="NameFirst" priority="1" />
+      <Item value="NameLast" priority="1" />
+      <Item value="School" priority="4" />
+      <Item value="IsActive" priority="0" />
+      <Item value="IsTeacher" priority="0" />
+      <Item value="AccessibleStudents" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.StringPropertyConfiguration">
+      <Item value="IsRequired`0" priority="13" />
+      <Item value="HasMaxLength`0" priority="11" />
+      <Item value="IsUnicode`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.RequiredNavigationPropertyConfiguration`2">
+      <Item value="WithRequiredDependent`0" priority="6" />
+      <Item value="WithMany`0" priority="3" />
+      <Item value="WithRequiredPrincipal`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.School">
+      <Item value="SchoolName" priority="3" />
+      <Item value="JoinedOn" priority="2" />
+      <Item value="Students" priority="0" />
+      <Item value="Users" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.DateTimePropertyConfiguration">
+      <Item value="IsRequired`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Data.Entity.Database">
+      <Item value="SetInitializer`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.DataAccess.HstDbContext">
+      <Item value="Configuration" priority="0" />
+      <Item value="Database" priority="0" />
+      <Item value="Users" priority="2" />
+      <Item value="Schools" priority="0" />
+      <Item value="SaveChanges`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Database">
+      <Item value="Connection" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Common.DbConnection">
+      <Item value="ConnectionString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="IsTrue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Infrastructure.DbModel">
+      <Item value="Compile`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Infrastructure.DbCompiledModel">
+      <Item value="CreateObjectContext`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Common.DbProviderFactory">
+      <Item value="CreateConnection`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Core.Storage.Ef.EfEntityContextBuilder">
+      <Item value="Build`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Core.Storage.Ef.HstEntityContextBuilder">
+      <Item value="CreateContext`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Hst.Services.ServiceEngine">
+      <Item value="Instance" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Services.ServiceEngine">
+      <Item value="IoC" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Core.IoC.IComponentContainer">
+      <Item value="Resolve`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Core.Storage.IEntityStore">
+      <Item value="AddEntity`1" priority="1" />
+      <Item value="SaveChanges`0" priority="0" />
+      <Item value="Query`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Core.Storage.Ef.HstEntityContext">
+      <Item value="ContextOptions" priority="0" />
+      <Item value="DatabaseExists`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.Activity">
+      <Item value="ActivityName" priority="0" />
+      <Item value="Notes" priority="0" />
+      <Item value="TimeSpent" priority="0" />
+      <Item value="Students" priority="2" />
+      <Item value="Subjects" priority="1" />
+      <Item value="RecordedBy" priority="2" />
+      <Item value="ActivityDate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.ManyNavigationPropertyConfiguration`2">
+      <Item value="WithOptional`0" priority="3" />
+      <Item value="WithRequired`0" priority="6" />
+      <Item value="WithMany`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.Student">
+      <Item value="DateOfBirth" priority="0" />
+      <Item value="NameFirst" priority="0" />
+      <Item value="NameLast" priority="0" />
+      <Item value="Activities" priority="0" />
+      <Item value="AssociatedUsers" priority="3" />
+      <Item value="Lessons" priority="0" />
+      <Item value="TestResults" priority="0" />
+      <Item value="School" priority="0" />
+      <Item value="Chores" priority="0" />
+      <Item value="AssignedChores" priority="0" />
+      <Item value="Id" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.Lesson">
+      <Item value="Students" priority="0" />
+      <Item value="LessonDate" priority="0" />
+      <Item value="LessonTitle" priority="0" />
+      <Item value="Notes" priority="0" />
+      <Item value="TimeSpent" priority="0" />
+      <Item value="RecordedBy" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.TestResult">
+      <Item value="Student" priority="0" />
+      <Item value="Test" priority="0" />
+      <Item value="Correct" priority="0" />
+      <Item value="Incorrect" priority="0" />
+      <Item value="NotAnswered" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.Subject">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.Test">
+      <Item value="Questions" priority="0" />
+      <Item value="TestDate" priority="0" />
+      <Item value="TestName" priority="0" />
+      <Item value="Results" priority="0" />
+      <Item value="Subjects" priority="0" />
+      <Item value="RecordedBy" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.Chore">
+      <Item value="ChoreFrequency" priority="0" />
+      <Item value="Frequency" priority="0" />
+      <Item value="Name" priority="0" />
+      <Item value="PointValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.ChoreAssignment">
+      <Item value="AssignedDate" priority="0" />
+      <Item value="IsApproved" priority="0" />
+      <Item value="IsComplete" priority="0" />
+      <Item value="Student" priority="1" />
+      <Item value="Chore" priority="0" />
+      <Item value="ApprovedBy" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.OptionalNavigationPropertyConfiguration`2">
+      <Item value="WithOptionalDependent`0" priority="0" />
+      <Item value="WithOptionalPrincipal`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Hst.Domain.Model.Image">
+      <Item value="File" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.DependentNavigationPropertyConfiguration`1">
+      <Item value="HasForeignKey`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.CascadableNavigationPropertyConfiguration">
+      <Item value="WillCascadeOnDelete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Contains`0" priority="1" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

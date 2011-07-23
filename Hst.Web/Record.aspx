@@ -108,7 +108,7 @@
             data: {},
             contentType: "application/json; charset=utf-8",
             success: function (json) {
-                var s = json.d;
+                var s = json.d[0];
 
                 for (var i = 0; i < s.length; i++) {
                     $('#subjectslist').append("<input id='subject_" + s[i].Id + "' name='subjects' type='checkbox' value='" + s[i].Id + "' /><label id='lsubject_" + s[i].Id + "' for='subject_" + s[i].Id + "'>" + s[i].Name + "</label>");

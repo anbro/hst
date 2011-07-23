@@ -6,8 +6,13 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Hst.DataAccess;
-using Hst.Domain.Entities;
+using Hst.Core.Storage;
+//using Hst.DataAccess;
+//using Hst.Domain.Entities;
+using Hst.Domain.Queries.Other;
+using Hst.Domain.Queries.People;
+using Hst.Domain.Model;
+using Hst.Services;
 
 public partial class SiteMaster : System.Web.UI.MasterPage
 {
@@ -18,14 +23,20 @@ public partial class SiteMaster : System.Web.UI.MasterPage
             var mu = Membership.GetUser();
             if (mu != null)
             {
-                var ua = new UserAccessor(ConfigurationManager.ConnectionStrings["DB"].ConnectionString);
-                var u = ua.GetUserByLogin(mu.UserName);
-                Profile.FirstName = u.NameFirst;
-                Profile.LastName = u.NameLast;
-                if (u.School != null)
+                using (var db = ServiceEngine.Instance.IoC.Resolve<IEntityStore>())
                 {
-                    Profile.SchoolName = u.School.SchoolName;
+                    var user = db.Query<User>().GetUserByLogin(mu.UserName);
+                    var schoolname = db.Query<School>().GetSchoolName(user);
+
+                    Profile.FirstName = user.NameFirst;
+                    Profile.LastName = user.NameLast;
+
+                    if (schoolname.Length > 0)
+                    {
+                        Profile.SchoolName = schoolname;
+                    }
                 }
+                
                 Profile.Save();
 
                 lblSchoolName.Text = Profile.SchoolName;

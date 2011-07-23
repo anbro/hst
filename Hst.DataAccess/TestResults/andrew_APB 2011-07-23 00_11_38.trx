@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="73cc7fee-1092-4476-a3f7-38cf82423034" name="andrew@APB 2011-07-23 00:11:38" runUser="BROWN\andrew" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="036155cb-c126-4833-9ffc-84b63cbab7f7">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="andrew_APB 2011-07-23 00_11_38">
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Storage\bin\Debug\Hst.Storage.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\bin\Debug\Hst.Core.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\Hst.Domain.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.DataAccess\bin\Debug\Hst.DataAccess.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Services\bin\Debug\Hst.Services.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-07-23T00:11:38.7746522-07:00" queuing="2011-07-23T00:11:38.8886636-07:00" start="2011-07-23T00:11:38.9256673-07:00" finish="2011-07-23T00:11:41.3429090-07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DeployDB" storage="c:\dev\homeschool\hstracker\hst.dataaccess\hst.unittests\bin\debug\hst.unittests.dll" id="e03bf64e-4519-ba6b-d07b-728ce920f322">
+      <Execution id="8fa3a5fe-ed9f-4339-ab12-f2b7a8e8056d" />
+      <TestMethod codeBase="c:/Dev/Homeschool/HSTracker/Hst.DataAccess/Hst.UnitTests/bin/Debug/Hst.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hst.UnitTests.DataContext, Hst.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeployDB" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e03bf64e-4519-ba6b-d07b-728ce920f322" executionId="8fa3a5fe-ed9f-4339-ab12-f2b7a8e8056d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8fa3a5fe-ed9f-4339-ab12-f2b7a8e8056d" testId="e03bf64e-4519-ba6b-d07b-728ce920f322" testName="DeployDB" computerName="APB" duration="00:00:02.0147493" startTime="2011-07-23T00:11:38.9566704-07:00" endTime="2011-07-23T00:11:41.3099057-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8fa3a5fe-ed9f-4339-ab12-f2b7a8e8056d">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method Hst.UnitTests.DataContext.DeployDB threw exception: 
+StructureMap.StructureMapException: StructureMap Exception Code:  207
+Internal exception while creating Instance '5bcf6643-b66a-4bbc-b922-b95a50784f71' of PluginType Hst.Core.Storage.Ef.HstEntityContext, Hst.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.  Check the inner exception for more details. ---&gt; System.InvalidOperationException: The database creation succeeded, but the creation of the database objects did not. See InnerException for details. ---&gt; System.Data.SqlClient.SqlException: Introducing FOREIGN KEY constraint 'User_School' on table 'Users' may cause cycles or multiple cascade paths. Specify ON DELETE NO ACTION or ON UPDATE NO ACTION, or modify other FOREIGN KEY constraints.
+Could not create constraint. See previous errors.</Message>
+          <StackTrace>    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.SqlClient.SqlProviderServices.&lt;&gt;c__DisplayClassa.&lt;DbCreateDatabase&gt;b__8(SqlConnection conn)
+   at System.Data.SqlClient.SqlProviderServices.UsingConnection(SqlConnection sqlConnection, Action`1 act)
+   at System.Data.SqlClient.SqlProviderServices.DbCreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+ --- End of inner exception stack trace ---
+    at System.Data.SqlClient.SqlProviderServices.DbCreateDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Objects.ObjectContext.CreateDatabase()
+   at Hst.Core.Storage.Ef.HstEntityContext..ctor(EntityConnection connection) in c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\Storage\Ef\HstEntityContext.cs:line 21
+   at lambda_method(Closure , EntityConnection )
+   at System.Data.Entity.Infrastructure.DbCompiledModel.CreateObjectContext[TContext](DbConnection existingConnection)
+   at Hst.Core.Storage.Ef.HstEntityContextBuilder.CreateContext() in c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\Storage\Ef\HstEntityContextBuilder.cs:line 42
+   at Hst.Services.ServiceComponentContainer.&lt;BootstrapContainer&gt;b__4() in c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Services\ServiceComponentContainer.cs:line 32
+   at StructureMap.Pipeline.ConstructorInstance`1.&lt;&gt;c__DisplayClass8.&lt;.ctor&gt;b__6(IContext s)
+   at StructureMap.Pipeline.ConstructorInstance`1.build(Type pluginType, BuildSession session)
+ --- End of inner exception stack trace ---
+    at StructureMap.Pipeline.ConstructorInstance`1.build(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.Instance.createRawObject(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.Instance.Build(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.BuildPolicy.Build(BuildSession buildSession, Type pluginType, Instance instance)
+   at StructureMap.InstanceFactory.Build(BuildSession session, Instance instance)
+   at StructureMap.BuildSession.CreateInstance(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.&lt;.ctor&gt;b__0(Type t)
+   at StructureMap.Util.Cache`2.get_Item(KEY key)
+   at StructureMap.BuildSession.CreateInstance(Type pluginType)
+   at StructureMap.Pipeline.DefaultInstance.build(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.Instance.createRawObject(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.Instance.Build(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.ConfiguredInstanceBase`1.getChild(String propertyName, Type pluginType, BuildSession buildSession)
+   at StructureMap.Pipeline.ConfiguredInstanceBase`1.StructureMap.Pipeline.IConfiguredInstance.GetChild(String propertyName, Type pluginType, BuildSession buildSession)
+   at HstCoreStorageEfHstEntityStoreInstanceBuilder7fe3410809a44c1ead27ffe1b2ebb566.BuildInstance(IConfiguredInstance , BuildSession )
+   at StructureMap.Pipeline.ConfiguredInstanceBase`1.StructureMap.Pipeline.IConfiguredInstance.Build(Type pluginType, BuildSession session, InstanceBuilder builder)
+   at StructureMap.Pipeline.SmartInstance`1.build(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.Instance.createRawObject(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.Instance.Build(Type pluginType, BuildSession session)
+   at StructureMap.Pipeline.BuildPolicy.Build(BuildSession buildSession, Type pluginType, Instance instance)
+   at StructureMap.InstanceFactory.Build(BuildSession session, Instance instance)
+   at StructureMap.BuildSession.CreateInstance(Type pluginType, Instance instance)
+   at StructureMap.BuildSession.&lt;.ctor&gt;b__0(Type t)
+   at StructureMap.Util.Cache`2.get_Item(KEY key)
+   at StructureMap.BuildSession.CreateInstance(Type pluginType)
+   at StructureMap.Container.GetInstance[T]()
+   at Hst.Core.IoC.StructureMapComponentContainer.Resolve[T]() in c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\IoC\StructureMapComponentContainer.cs:line 24
+   at Hst.UnitTests.DataContext.DeployDB() in c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.UnitTests\DataContext.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

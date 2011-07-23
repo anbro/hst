@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="437be3bf-eac1-4c75-8fde-240e9ef6c1ca" name="andrew@APB 2011-07-22 23:31:41" runUser="BROWN\andrew" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="036155cb-c126-4833-9ffc-84b63cbab7f7">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="andrew_APB 2011-07-22 23_31_41">
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Storage\bin\Debug\Hst.Storage.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\bin\Debug\Hst.Core.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\Hst.Domain.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.DataAccess\bin\Debug\Hst.DataAccess.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Services\bin\Debug\Hst.Services.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-07-22T23:31:41.7869774-07:00" queuing="2011-07-22T23:32:03.7671752-07:00" start="2011-07-22T23:32:04.3562341-07:00" finish="2011-07-22T23:35:36.8134777-07:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="APB" outcome="Error" timestamp="2011-07-22T23:35:36.3694333-07:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DeployDB" storage="c:\dev\homeschool\hstracker\hst.dataaccess\hst.unittests\bin\debug\hst.unittests.dll" id="e03bf64e-4519-ba6b-d07b-728ce920f322">
+      <Execution id="1b272eca-d5d1-431b-9622-54562b9466b1" />
+      <TestMethod codeBase="c:/Dev/Homeschool/HSTracker/Hst.DataAccess/Hst.UnitTests/bin/Debug/Hst.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hst.UnitTests.DataContext, Hst.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeployDB" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e03bf64e-4519-ba6b-d07b-728ce920f322" executionId="1b272eca-d5d1-431b-9622-54562b9466b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="1b272eca-d5d1-431b-9622-54562b9466b1" testId="e03bf64e-4519-ba6b-d07b-728ce920f322" testName="DeployDB" computerName="APB" duration="00:03:32.0922071" startTime="2011-07-22T23:32:04.7212706-07:00" endTime="2011-07-22T23:35:36.8134777-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b272eca-d5d1-431b-9622-54562b9466b1">
+    </UnitTestResult>
+  </Results>
+</TestRun>

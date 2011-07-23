@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="0d79b92f-bd40-49b0-89b3-09fca603bf7f" name="andrew@APB 2011-07-23 00:00:00" runUser="BROWN\andrew" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="036155cb-c126-4833-9ffc-84b63cbab7f7">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment userDeploymentRoot="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\TestResults" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="andrew_APB 2011-07-23 00_00_00">
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Storage\bin\Debug\Hst.Storage.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\bin\Debug\Hst.Core.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\Hst.Domain.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.DataAccess\bin\Debug\Hst.DataAccess.dll" />
+      <DeploymentItem filename="c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Services\bin\Debug\Hst.Services.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-07-23T00:00:00.8988716-07:00" queuing="2011-07-23T00:00:02.3590176-07:00" start="2011-07-23T00:00:02.7730590-07:00" finish="2011-07-23T00:00:13.2151031-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="DeployDB" storage="c:\dev\homeschool\hstracker\hst.dataaccess\hst.unittests\bin\debug\hst.unittests.dll" id="e03bf64e-4519-ba6b-d07b-728ce920f322">
+      <Execution id="6ef2c887-52c9-4e0d-ba49-a5525589392c" />
+      <TestMethod codeBase="c:/Dev/Homeschool/HSTracker/Hst.DataAccess/Hst.UnitTests/bin/Debug/Hst.UnitTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Hst.UnitTests.DataContext, Hst.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeployDB" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e03bf64e-4519-ba6b-d07b-728ce920f322" executionId="6ef2c887-52c9-4e0d-ba49-a5525589392c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="6ef2c887-52c9-4e0d-ba49-a5525589392c" testId="e03bf64e-4519-ba6b-d07b-728ce920f322" testName="DeployDB" computerName="APB" duration="00:00:07.8519908" startTime="2011-07-23T00:00:02.9170734-07:00" endTime="2011-07-23T00:00:11.6669483-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ef2c887-52c9-4e0d-ba49-a5525589392c">
+    </UnitTestResult>
+  </Results>
+</TestRun>
