@@ -26,15 +26,21 @@ public partial class SiteMaster : System.Web.UI.MasterPage
                 using (var db = ServiceEngine.Instance.IoC.Resolve<IEntityStore>())
                 {
                     var user = db.Query<User>().GetUserByLogin(mu.UserName);
-                    var schoolname = db.Query<School>().GetSchoolName(user);
+
+                    if (user.School != null)
+                    {
+                        var schoolname = db.Query<School>().GetSchoolName(user);
+
+                        
+
+                        if (schoolname.Length > 0)
+                        {
+                            Profile.SchoolName = schoolname;
+                        }
+                    }
 
                     Profile.FirstName = user.NameFirst;
                     Profile.LastName = user.NameLast;
-
-                    if (schoolname.Length > 0)
-                    {
-                        Profile.SchoolName = schoolname;
-                    }
                 }
                 
                 Profile.Save();

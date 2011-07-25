@@ -13,6 +13,11 @@ namespace Hst.Domain.Queries.Other
             return schools.Where(s => s.Users.Select(u => u.Id).Contains(user.Id)).FirstOrDefault().SchoolName;
         }
 
+        public static School GetSchoolByUserId(this IQueryable<School> schools, int id)
+        {
+            return schools.Where(s => s.Users.Select(u => u.Id).Contains(id)).FirstOrDefault();
+        }
+
         
     }
 }

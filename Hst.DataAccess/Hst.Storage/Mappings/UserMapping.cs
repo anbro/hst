@@ -29,7 +29,9 @@ namespace Hst.Storage.Mappings
                 .IsRequired()
                 .HasMaxLength(50);
 
-            HasRequired(u => u.School).WithMany(s => s.Users).WillCascadeOnDelete(false);
+            HasOptional(u => u.School).WithMany(s => s.Users).WillCascadeOnDelete(false);
+
+            //HasRequired(u => u.School).WithMany(s => s.Users).WillCascadeOnDelete(false);
                 
             //    .WithRequiredDependent();
 
