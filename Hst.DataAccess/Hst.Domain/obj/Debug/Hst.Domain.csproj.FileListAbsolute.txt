@@ -1,0 +1,12 @@
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\Hst.Domain.dll
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\Hst.Domain.pdb
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\Hst.Core.dll
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\StructureMap.dll
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\Hst.Core.pdb
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\bin\Debug\StructureMap.xml
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\obj\Debug\ResolveAssemblyReference.cache
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\obj\Debug\Hst.Domain.Resources.ValidationMessages.resources
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\obj\Debug\GenerateResource.read.1.tlog
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\obj\Debug\GenerateResource.write.1.tlog
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\obj\Debug\Hst.Domain.dll
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Domain\obj\Debug\Hst.Domain.pdb

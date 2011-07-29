@@ -94,6 +94,8 @@
     <Compile Include="Queries\Other\SchoolQueries.cs" />
     <Compile Include="Queries\People\StudentQueries.cs" />
     <Compile Include="Queries\People\UserQueries.cs" />
+    <Compile Include="Queries\Records\ActivityQueries.cs" />
+    <Compile Include="Queries\Records\LessonQueries.cs" />
     <Compile Include="Resources\ValidationMessages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,7 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="Queries\Records\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

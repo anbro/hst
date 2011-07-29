@@ -1,0 +1,7 @@
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\bin\Debug\Hst.Core.dll
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\bin\Debug\Hst.Core.pdb
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\bin\Debug\StructureMap.dll
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\bin\Debug\StructureMap.xml
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\obj\Debug\ResolveAssemblyReference.cache
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\obj\Debug\Hst.Core.dll
+c:\Dev\Homeschool\HSTracker\Hst.DataAccess\Hst.Core\obj\Debug\Hst.Core.pdb
